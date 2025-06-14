@@ -1,0 +1,58 @@
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+}
+/* index.css yoki App.css ga qo‘shing */
+body {
+  background-color: white;
+  color: black;
+  transition: 0.3s ease;
+}
+
+body.dark {
+  background-color: #121212;
+  color: #eee;
+}
+
+/* Har bir sahifa konteyneriga ta'sir qiladigan class */
+.userhome-container,
+.bron-container,
+.edit-toyxona-wrapper,
+.cards-wrapper,
+.navbar-container {
+  background-color: inherit;
+  color: inherit;
+  transition: 0.3s ease;
+  
+}
+
+/* Kartochkalar */
+.toyxona-card {
+  background-color: #f9f9f9;
+  color: #111;
+  border-radius: 10px;
+  padding: 10px;
+  transition: 0.3s ease;
+}
+
+body.dark .toyxona-card {
+  background-color: #1f1f1f;
+  color: #f0f0f0;
+}
+
+/* Inputlar */
+input, select, textarea {
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+body.dark input,
+body.dark select,
+body.dark textarea {
+  background-color: #2a2a2a;
+  color: #fff;
+  border-color: #555;
+}

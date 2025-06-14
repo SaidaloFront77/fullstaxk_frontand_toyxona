@@ -1,0 +1,759 @@
+/* ===== TOYXONA NAVBAR - YORQIN RANGLAR BILAN ===== */
+
+/* Asosiy Navbar - Yorqin gradient */
+.navbar {
+  background: linear-gradient(135deg, 
+    #000000 0%, 
+    #1a0033 15%,
+    #330066 30%,
+    #4d0099 45%,
+    #6600cc 60%,
+    #4d0099 75%,
+    #1a0033 90%,
+    #000000 100%
+  );
+  backdrop-filter: blur(25px);
+  box-shadow: 
+    0 10px 40px rgba(255, 215, 0, 0.4),
+    0 0 0 2px rgba(255, 215, 0, 0.6),
+    inset 0 2px 0 rgba(255, 215, 0, 0.3),
+    0 0 60px rgba(102, 0, 204, 0.3);
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 3px solid transparent;
+  border-image: linear-gradient(90deg, 
+    #ff0080, #ff4000, #ffff00, #00ff80, #0080ff, #8000ff, #ff0080
+  ) 1;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Navbar hover effekti - yanada yorqin */
+.navbar:hover {
+  box-shadow: 
+    0 15px 50px rgba(255, 215, 0, 0.6),
+    0 0 0 3px rgba(255, 215, 0, 0.8),
+    inset 0 2px 0 rgba(255, 215, 0, 0.5),
+    0 0 80px rgba(102, 0, 204, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Animatsiyali rainbow fon */
+.navbar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(255, 0, 128, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(0, 255, 128, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 50% 20%, rgba(255, 255, 0, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 50% 80%, rgba(128, 0, 255, 0.15) 0%, transparent 50%),
+    linear-gradient(45deg, 
+      rgba(255, 0, 128, 0.1) 0%, 
+      rgba(255, 128, 0, 0.1) 25%, 
+      rgba(255, 255, 0, 0.1) 50%, 
+      rgba(0, 255, 128, 0.1) 75%, 
+      rgba(0, 128, 255, 0.1) 100%
+    );
+  opacity: 0.8;
+  pointer-events: none;
+  animation: rainbowShift 6s ease-in-out infinite;
+}
+
+@keyframes rainbowShift {
+  0%, 100% { 
+    opacity: 0.8; 
+    transform: translateX(0) scale(1); 
+    filter: hue-rotate(0deg);
+  }
+  25% { 
+    opacity: 1; 
+    transform: translateX(5px) scale(1.02); 
+    filter: hue-rotate(90deg);
+  }
+  50% { 
+    opacity: 0.9; 
+    transform: translateX(0) scale(1.01); 
+    filter: hue-rotate(180deg);
+  }
+  75% { 
+    opacity: 1; 
+    transform: translateX(-5px) scale(1.02); 
+    filter: hue-rotate(270deg);
+  }
+}
+
+/* Navbar konteyneri */
+.navbar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  position: relative;
+}
+
+/* ===== LOGO VA EQUALIZER - YORQIN RANGLAR ===== */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-family: 'Playfair Display', 'Georgia', serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(45deg, 
+    #ff0080, #ff4000, #ffff00, #00ff80, #0080ff, #8000ff
+  );
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 
+    0 0 20px rgba(255, 215, 0, 1),
+    0 0 40px rgba(255, 0, 128, 0.8),
+    0 0 60px rgba(0, 255, 128, 0.6);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  animation: logoGradient 3s ease-in-out infinite;
+}
+
+@keyframes logoGradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.navbar-logo::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background: linear-gradient(90deg, 
+    #ff0080, #ff4000, #ffff00, #00ff80, #0080ff, #8000ff
+  );
+  background-size: 200% 200%;
+  animation: gradientFlow 2s linear infinite;
+  transition: width 0.6s ease;
+  border-radius: 2px;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+}
+
+.navbar-logo:hover::after {
+  width: 100%;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+.navbar-logo:hover {
+  transform: scale(1.1) translateY(-3px) rotateY(5deg);
+  text-shadow: 
+    0 0 30px rgba(255, 215, 0, 1),
+    0 0 50px rgba(255, 0, 128, 1),
+    0 0 70px rgba(0, 255, 128, 0.8),
+    0 0 90px rgba(128, 0, 255, 0.6);
+  filter: brightness(1.3) saturate(1.2);
+}
+
+/* Equalizer - yorqin ranglar */
+.equalizer {
+  display: flex;
+  gap: 4px;
+  margin-right: 15px;
+  padding: 10px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, 
+    rgba(255, 0, 128, 0.2), 
+    rgba(255, 215, 0, 0.2), 
+    rgba(0, 255, 128, 0.2)
+  );
+  backdrop-filter: blur(15px);
+  border: 2px solid rgba(255, 215, 0, 0.4);
+  transition: all 0.4s ease;
+  box-shadow: 
+    0 0 20px rgba(255, 215, 0, 0.4),
+    inset 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.equalizer:hover {
+  background: linear-gradient(135deg, 
+    rgba(255, 0, 128, 0.4), 
+    rgba(255, 215, 0, 0.4), 
+    rgba(0, 255, 128, 0.4)
+  );
+  transform: scale(1.15) rotateZ(2deg);
+  box-shadow: 
+    0 0 30px rgba(255, 215, 0, 0.8),
+    0 0 50px rgba(255, 0, 128, 0.4);
+}
+
+.equalizer span {
+  width: 5px;
+  height: 25px;
+  background: linear-gradient(180deg, 
+    #ff0080 0%, 
+    #ff4000 20%,
+    #ffff00 40%, 
+    #00ff80 60%,
+    #0080ff 80%,
+    #8000ff 100%
+  );
+  border-radius: 3px;
+  box-shadow: 
+    0 0 15px rgba(255, 215, 0, 1),
+    inset 0 0 8px rgba(255, 255, 255, 0.4);
+  animation: equalizerIdle 1.5s ease-in-out infinite alternate;
+  transform-origin: bottom;
+  position: relative;
+}
+
+.equalizer span::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, 
+    rgba(255, 255, 255, 0.6) 0%, 
+    transparent 50%
+  );
+  border-radius: 3px;
+}
+
+.equalizer.playing span {
+  animation: equalizerActive 0.6s ease-in-out infinite alternate;
+}
+
+.equalizer span:nth-child(1) { animation-delay: 0s; }
+.equalizer span:nth-child(2) { animation-delay: 0.15s; }
+.equalizer span:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes equalizerIdle {
+  0% { 
+    transform: scaleY(0.4); 
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
+    filter: brightness(0.8);
+  }
+  100% { 
+    transform: scaleY(0.7); 
+    box-shadow: 0 0 20px rgba(255, 215, 0, 1);
+    filter: brightness(1.2);
+  }
+}
+
+@keyframes equalizerActive {
+  0% { 
+    transform: scaleY(0.3); 
+    box-shadow: 0 0 10px rgba(255, 0, 128, 0.8);
+    filter: hue-rotate(0deg) brightness(1);
+  }
+  100% { 
+    transform: scaleY(1.4); 
+    box-shadow: 0 0 25px rgba(0, 255, 128, 1);
+    filter: hue-rotate(180deg) brightness(1.5);
+  }
+}
+
+/* ===== NAVBAR ACTIONS ===== */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* ===== TUGMALAR - YORQIN RANGLAR ===== */
+.btn {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 30px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  backdrop-filter: blur(15px);
+  border: 2px solid transparent;
+}
+
+/* Tugma rainbow shimmer effekti */
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.8), 
+    transparent
+  );
+  transition: left 0.8s ease;
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+/* Tugma glow effekti */
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, 
+    rgba(255, 255, 255, 0.5) 0%, 
+    rgba(255, 215, 0, 0.3) 30%,
+    transparent 70%
+  );
+  transition: all 0.5s ease;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.btn:hover::after {
+  width: 300px;
+  height: 300px;
+}
+
+/* Tema tugmasi - yorqin */
+.btn-theme {
+  background: linear-gradient(135deg, 
+    #ff0080 0%, 
+    #ff4000 25%,
+    #ffff00 50%, 
+    #00ff80 75%,
+    #0080ff 100%
+  );
+  background-size: 300% 300%;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  box-shadow: 
+    0 6px 20px rgba(255, 215, 0, 0.6),
+    0 0 40px rgba(255, 0, 128, 0.4),
+    inset 0 2px 0 rgba(255, 255, 255, 0.4);
+  border: 2px solid rgba(255, 215, 0, 0.8);
+  animation: themeGradient 4s ease-in-out infinite;
+}
+
+@keyframes themeGradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.btn-theme:hover {
+  transform: translateY(-4px) scale(1.1) rotateZ(2deg);
+  box-shadow: 
+    0 12px 30px rgba(255, 215, 0, 0.8),
+    0 0 60px rgba(255, 0, 128, 0.6),
+    inset 0 2px 0 rgba(255, 255, 255, 0.6);
+  animation-duration: 2s;
+}
+
+/* Login tugmasi - yorqin */
+.btn-login {
+  background: linear-gradient(135deg, 
+    #8000ff 0%, 
+    #4000ff 50%, 
+    #0080ff 100%
+  );
+  color: #ffffff;
+  border: 2px solid rgba(255, 215, 0, 0.5);
+  box-shadow: 
+    0 6px 20px rgba(128, 0, 255, 0.6),
+    0 0 30px rgba(64, 0, 255, 0.4),
+    inset 0 2px 0 rgba(255, 255, 255, 0.2);
+}
+
+.btn-login:hover {
+  background: linear-gradient(135deg, 
+    #a000ff 0%, 
+    #6000ff 50%, 
+    #00a0ff 100%
+  );
+  transform: translateY(-4px) scale(1.1);
+  box-shadow: 
+    0 12px 30px rgba(128, 0, 255, 0.8),
+    0 0 50px rgba(255, 215, 0, 0.5);
+}
+
+/* Register tugmasi - yorqin */
+.btn-register {
+  background: linear-gradient(135deg, 
+    #ff4000 0%, 
+    #ffff00 50%,
+    #00ff80 100%
+  );
+  background-size: 200% 200%;
+  color: #000000;
+  font-weight: 800;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+  box-shadow: 
+    0 6px 20px rgba(255, 215, 0, 0.7),
+    0 0 40px rgba(255, 128, 0, 0.5),
+    inset 0 2px 0 rgba(255, 255, 255, 0.4);
+  border: 2px solid rgba(255, 215, 0, 0.9);
+  animation: registerGlow 3s ease-in-out infinite;
+}
+
+@keyframes registerGlow {
+  0%, 100% { 
+    background-position: 0% 50%; 
+    box-shadow: 
+      0 6px 20px rgba(255, 215, 0, 0.7),
+      0 0 40px rgba(255, 128, 0, 0.5);
+  }
+  50% { 
+    background-position: 100% 50%; 
+    box-shadow: 
+      0 8px 25px rgba(255, 215, 0, 0.9),
+      0 0 50px rgba(0, 255, 128, 0.6);
+  }
+}
+
+.btn-register:hover {
+  transform: translateY(-4px) scale(1.1);
+  box-shadow: 
+    0 12px 35px rgba(255, 215, 0, 0.9),
+    0 0 60px rgba(255, 128, 0, 0.7),
+    0 0 80px rgba(0, 255, 128, 0.5);
+  animation-duration: 1.5s;
+}
+
+/* Logout tugmasi - yorqin */
+.btn-logout {
+  background: linear-gradient(135deg, 
+    #ff0040 0%, 
+    #ff4000 50%,
+    #ff8000 100%
+  );
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+  box-shadow: 
+    0 6px 20px rgba(255, 0, 64, 0.6),
+    0 0 30px rgba(255, 64, 0, 0.4),
+    inset 0 2px 0 rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 0, 64, 0.7);
+}
+
+.btn-logout:hover {
+  background: linear-gradient(135deg, 
+    #ff0060 0%, 
+    #ff6000 50%,
+    #ffa000 100%
+  );
+  transform: translateY(-4px) scale(1.1);
+  box-shadow: 
+    0 12px 30px rgba(255, 0, 64, 0.8),
+    0 0 50px rgba(255, 64, 0, 0.6);
+}
+
+/* ===== USER MENU - YORQIN ===== */
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(135deg, 
+    rgba(255, 0, 128, 0.2), 
+    rgba(255, 215, 0, 0.2), 
+    rgba(0, 255, 128, 0.2)
+  );
+  border-radius: 25px;
+  backdrop-filter: blur(15px);
+  border: 2px solid rgba(255, 215, 0, 0.5);
+  box-shadow: 
+    0 0 30px rgba(255, 215, 0, 0.4),
+    inset 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.navbar-role {
+  color: #ffff00;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  text-shadow: 
+    0 0 15px rgba(255, 255, 0, 0.8),
+    0 0 25px rgba(255, 215, 0, 0.6);
+  position: relative;
+  background: linear-gradient(45deg, #ffff00, #00ff80, #0080ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.navbar-role::before {
+  content: '♪♫♪';
+  margin-right: 10px;
+  color: #ff0080;
+  animation: musicNotes 2s ease-in-out infinite;
+  -webkit-text-fill-color: #ff0080;
+}
+
+@keyframes musicNotes {
+  0%, 100% { 
+    transform: translateY(0) rotate(0deg); 
+    color: #ff0080;
+  }
+  33% { 
+    transform: translateY(-4px) rotate(5deg); 
+    color: #ffff00;
+  }
+  66% { 
+    transform: translateY(-2px) rotate(-3deg); 
+    color: #00ff80;
+  }
+}
+
+/* Auth menu */
+.auth-menu {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+/* ===== RESPONSIV DIZAYN ===== */
+@media (max-width: 1024px) {
+  .navbar-container {
+    padding: 0 1.5rem;
+  }
+  
+  .navbar-logo {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 0;
+  }
+  
+  .navbar-container {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .navbar-actions {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .navbar-logo {
+    font-size: 2rem;
+  }
+
+  .btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
+  }
+  
+  .user-menu {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-logo {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+  }
+  
+  .equalizer {
+    margin-right: 10px;
+  }
+  
+  .equalizer span {
+    width: 4px;
+    height: 20px;
+  }
+  
+  .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.9rem 1.2rem;
+  }
+  
+  .auth-menu {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+/* ===== MAXSUS ANIMATSIYALAR ===== */
+@keyframes navbarEntrance {
+  from { 
+    opacity: 0; 
+    transform: translateY(-30px) scale(0.95); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0) scale(1); 
+  }
+}
+
+.navbar {
+  animation: navbarEntrance 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Rainbow pulse animatsiyasi */
+@keyframes rainbowPulse {
+  0% { 
+    box-shadow: 0 0 0 0 rgba(255, 0, 128, 0.8); 
+  }
+  25% { 
+    box-shadow: 0 0 0 15px rgba(255, 215, 0, 0.4); 
+  }
+  50% { 
+    box-shadow: 0 0 0 25px rgba(0, 255, 128, 0.2); 
+  }
+  75% { 
+    box-shadow: 0 0 0 15px rgba(0, 128, 255, 0.4); 
+  }
+  100% { 
+    box-shadow: 0 0 0 0 rgba(128, 0, 255, 0.8); 
+  }
+}
+
+.btn:active {
+  animation: rainbowPulse 0.8s;
+}
+
+/* Floating animatsiyasi - yorqin */
+@keyframes floatingBright {
+  0%, 100% { 
+    transform: translateY(0px) rotateZ(0deg); 
+    filter: brightness(1) hue-rotate(0deg);
+  }
+  25% { 
+    transform: translateY(-8px) rotateZ(1deg); 
+    filter: brightness(1.2) hue-rotate(90deg);
+  }
+  50% { 
+    transform: translateY(-5px) rotateZ(0deg); 
+    filter: brightness(1.1) hue-rotate(180deg);
+  }
+  75% { 
+    transform: translateY(-8px) rotateZ(-1deg); 
+    filter: brightness(1.2) hue-rotate(270deg);
+  }
+}
+
+.navbar-logo:hover {
+  animation: floatingBright 3s ease-in-out infinite;
+}
+
+/* ===== DARK MODE SUPPORT - YORQIN ===== */
+[data-theme="dark"] .navbar {
+  background: linear-gradient(135deg, 
+    #000000 0%, 
+    #1a0033 15%,
+    #330066 30%,
+    #4d0099 45%,
+    #6600cc 60%,
+    #4d0099 75%,
+    #1a0033 90%,
+    #000000 100%
+  );
+  box-shadow: 
+    0 10px 40px rgba(255, 215, 0, 0.5),
+    0 0 0 2px rgba(255, 215, 0, 0.7);
+}
+
+[data-theme="light"] .navbar {
+  background: linear-gradient(135deg, 
+    #ffffff 0%, 
+    #f0f8ff 15%,
+    #e6f3ff 30%,
+    #ccebff 45%,
+    #b3e0ff 60%,
+    #ccebff 75%,
+    #e6f3ff 90%,
+    #ffffff 100%
+  );
+  box-shadow: 
+    0 10px 40px rgba(255, 215, 0, 0.3),
+    0 0 0 2px rgba(255, 215, 0, 0.5);
+}
+
+[data-theme="light"] .navbar-logo {
+  background: linear-gradient(45deg, 
+    #ff0080, #ff4000, #ff8000, #ffff00, #80ff00, #00ff80, #0080ff, #8000ff
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 
+    0 0 20px rgba(255, 215, 0, 0.8),
+    0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== SCROLL EFFEKTI - YORQIN ===== */
+.navbar.scrolled {
+  padding: 0.6rem 0;
+  backdrop-filter: blur(30px);
+  box-shadow: 
+    0 15px 50px rgba(255, 215, 0, 0.6),
+    0 0 0 3px rgba(255, 215, 0, 0.8),
+    0 0 100px rgba(102, 0, 204, 0.4);
+  transform: translateY(0) scale(0.98);
+}
+
+.navbar.scrolled .navbar-logo {
+  font-size: 2rem;
+  filter: brightness(1.3);
+}
+
+/* ===== ACCESSIBILITY - YORQIN ===== */
+.btn:focus {
+  outline: 3px solid #ffff00;
+  outline-offset: 3px;
+  box-shadow: 
+    0 0 0 6px rgba(255, 255, 0, 0.4),
+    0 0 20px rgba(255, 215, 0, 0.8);
+}
+
+.navbar-logo:focus {
+  outline: 3px solid #ffff00;
+  outline-offset: 6px;
+  border-radius: 8px;
+  box-shadow: 0 0 30px rgba(255, 255, 0, 0.6);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .navbar,
+  .btn,
+  .navbar-logo,
+  .equalizer span {
+    animation: none;
+    transition: none;
+  }
+}

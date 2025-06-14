@@ -1,0 +1,252 @@
+/* Umumiy stillar */
+body {
+  margin: 0;
+  font-family: 'Dancing Script', cursive;
+  background: linear-gradient(180deg, #0a0715 0%, #1c1124 100%);
+  color: #f7e0a3;
+  overflow-x: hidden;
+}
+
+/* Bronlar konteyneri */
+.bronlar-container {
+  padding: 2rem;
+  margin-left: 80px; /* AdminLayout sidebar kengligiga mos */
+  min-height: calc(100vh - 60px); /* Navbar balandligiga mos */
+  background: linear-gradient(135deg, #1c1124 0%, #0a0715 100%);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(212, 175, 55, 0.1);
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 0.6s ease-in;
+}
+
+/* Fon effekti */
+.bronlar-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top left, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Sarlavha */
+.bronlar-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5rem;
+  color: #d4af37;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.7), 0 0 20px rgba(212, 175, 55, 0.4);
+  text-align: center;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.bronlar-title:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 15px rgba(212, 175, 55, 0.9);
+}
+
+/* Yuklanmoqda, xato va ma'lumot yo'q xabarlari */
+.loading-text,
+.error-text,
+.no-data-text {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.4rem;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 1rem 0;
+}
+
+.loading-text {
+  color: #d4af37;
+  background: rgba(212, 175, 55, 0.2);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+.error-text {
+  color: #ff4d4d;
+  background: rgba(178, 34, 34, 0.2);
+  box-shadow: 0 0 10px rgba(178, 34, 34, 0.5);
+  animation: shake 0.3s ease;
+}
+
+.no-data-text {
+  color: #f7e0a3;
+  background: rgba(74, 46, 123, 0.2);
+  box-shadow: 0 0 10px rgba(74, 46, 123, 0.5);
+}
+
+/* Shake animatsiyasi */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+/* Bronlar gridi */
+.bronlar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+/* Bron kartasi */
+.bron-card {
+  background: linear-gradient(135deg, #2c1b47 0%, #1a102e 100%);
+  border: 1px solid #d4af37;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(212, 175, 55, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: cardFadeIn 0.6s ease-in;
+}
+
+.bron-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.7);
+}
+
+/* Karta animatsiyasi */
+@keyframes cardFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Bron ma'lumotlari */
+.bron-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.2rem;
+  color: #f7e0a3;
+}
+
+.bron-info p {
+  margin: 0;
+}
+
+.bron-info strong {
+  color: #d4af37;
+  text-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
+}
+
+/* Status stillari */
+.status {
+  padding: 0.4rem 0.8rem;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.status.tasdiqlangan {
+  background: linear-gradient(45deg, #4a2e7b, #6b3fa0);
+  box-shadow: 0 0 10px rgba(74, 46, 123, 0.5);
+}
+
+.status.kutilmoqda {
+  background: linear-gradient(45deg, #d4af37, #f0d68c);
+  color: #1c1124;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+.status.bekorqilingan {
+  background: linear-gradient(45deg, #b22222, #d43f3f);
+  box-shadow: 0 0 10px rgba(178, 34, 34, 0.5);
+}
+
+/* Bekor qilish tugmasi */
+.delete-button {
+  padding: 0.6rem 1rem;
+  background: linear-gradient(45deg, #b22222, #d43f3f);
+  color: #fff;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(178, 34, 34, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.delete-button:hover {
+  background: linear-gradient(45deg, #c82333, #e54b4b);
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(178, 34, 34, 0.7);
+}
+
+/* Tugma yorqinlik effekti */
+.delete-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: 0.5s;
+}
+
+.delete-button:hover::before {
+  left: 100%;
+}
+
+/* Responsiv dizayn */
+@media (max-width: 768px) {
+  .bronlar-container {
+    margin-left: 60px; /* Mobil sidebar kengligiga mos */
+    padding: 1rem;
+  }
+
+  .bronlar-title {
+    font-size: 2rem;
+  }
+
+  .bronlar-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .bron-card {
+    padding: 1rem;
+  }
+
+  .bron-info {
+    font-size: 1rem;
+  }
+
+  .delete-button {
+    font-size: 1rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  .loading-text,
+  .error-text,
+  .no-data-text {
+    font-size: 1.2rem;
+    padding: 0.6rem;
+  }
+}
+
+/* Nozik animatsiyalar */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Yorqinlik effekti */
+@keyframes glow {
+  0% { box-shadow: 0 0 8px rgba(212, 175, 55, 0.4); }
+  50% { box-shadow: 0 0 15px rgba(212, 175, 55, 0.7); }
+  100% { box-shadow: 0 0 8px rgba(212, 175, 55, 0.4); }
+}
+
+.delete-button:hover {
+  animation: glow 1.2s infinite;
+}

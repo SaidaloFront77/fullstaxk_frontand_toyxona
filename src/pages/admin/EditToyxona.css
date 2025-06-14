@@ -1,0 +1,304 @@
+/* Umumiy stillar */
+body {
+  margin: 0;
+  font-family: 'Dancing Script', cursive;
+  background: linear-gradient(180deg, #0a0715 0%, #1c1124 100%);
+  color: #f7e0a3;
+  overflow-x: hidden;
+}
+
+/* Edit to'yxona konteyneri */
+.edit-toyxona-container {
+  padding: 2rem;
+  margin-left: 80px; /* AdminLayout sidebar kengligiga mos */
+  min-height: calc(100vh - 60px); /* Navbar balandligiga mos */
+  background: linear-gradient(135deg, #1c1124 0%, #0a0715 100%);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(212, 175, 55, 0.1);
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 0.6s ease-in;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Fon effekti */
+.edit-toyxona-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top left, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Sarlavha */
+.edit-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5rem;
+  color: #d4af37;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.7), 0 0 20px rgba(212, 175, 55, 0.4);
+  text-align: center;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.edit-title:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 15px rgba(212, 175, 55, 0.9);
+}
+
+/* Xato xabari */
+.error-text {
+  color: #ff4d4d;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.2rem;
+  background: rgba(178, 34, 34, 0.2);
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0 10px rgba(178, 34, 34, 0.5);
+  animation: shake 0.3s ease;
+}
+
+/* Shake animatsiyasi */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+/* Yuklanmoqda xabari */
+.loading-text {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.4rem;
+  color: #d4af37;
+  background: rgba(212, 175, 55, 0.2);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+  text-align: center;
+  margin: 1rem 0;
+}
+
+/* Forma stillari */
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 600px;
+  background: linear-gradient(135deg, #2c1b47 0%, #1a102e 100%);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(212, 175, 55, 0.2);
+  border: 1px solid #d4af37;
+}
+
+/* Forma gridi */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Yorliqlar */
+.edit-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.4rem;
+  color: #f7e0a3;
+  text-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
+}
+
+/* Inputlar */
+.edit-input {
+  padding: 0.8rem 1rem;
+  border: 1px solid #d4af37;
+  border-radius: 15px;
+  background: linear-gradient(45deg, #4a2e7b, #6b3fa0);
+  color: #f7e0a3;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.2rem;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+}
+
+.edit-input::placeholder {
+  color: rgba(247, 224, 163, 0.7);
+  font-family: 'Dancing Script', cursive;
+}
+
+.edit-input:focus {
+  border-color: #f7e0a3;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.7);
+  transform: scale(1.02);
+}
+
+/* Input yorqinlik effekti */
+.edit-input::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: 0.5s;
+}
+
+.edit-input:hover::before {
+  left: 100%;
+}
+
+/* Fayl yuklash inputi */
+.file-label {
+  position: relative;
+  cursor: pointer;
+}
+
+.edit-file-input {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.file-label::before {
+  content: 'Rasm tanlash';
+  display: block;
+  padding: 0.8rem 1.5rem;
+  border: 1px solid #d4af37;
+  border-radius: 15px;
+  background: linear-gradient(45deg, #4a2e7b, #6b3fa0);
+  color: #f7e0a3;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.2rem;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+  transition: all 0.3s ease;
+}
+
+.file-label:hover::before {
+  background: linear-gradient(45deg, #5b3a94, #7c4db6);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.7);
+  transform: translateY(-2px);
+}
+
+/* Tugma */
+.edit-button {
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(45deg, #d4af37, #f0d68c);
+  color: #1c1124;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 15px rgba(212, 175, 55, 0.6);
+  position: relative;
+  overflow: hidden;
+}
+
+.edit-button:hover {
+  background: linear-gradient(45deg, #e6c74c, #f7e0a3);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(212, 175, 55, 0.8);
+}
+
+/* Tugma yorqinlik effekti */
+.edit-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: 0.5s;
+}
+
+.edit-button:hover::before {
+  left: 100%;
+}
+
+/* Tugma konteyneri */
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/* Responsiv dizayn */
+@media (max-width: 768px) {
+  .edit-toyxona-container {
+    margin-left: 60px; /* Mobil sidebar kengligiga mos */
+    padding: 1rem;
+  }
+
+  .edit-title {
+    font-size: 2rem;
+  }
+
+  .edit-form {
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .edit-label {
+    font-size: 1.2rem;
+  }
+
+  .edit-input {
+    font-size: 1rem;
+    padding: 0.6rem 0.8rem;
+  }
+
+  .file-label::before {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .edit-button {
+    font-size: 1.2rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .error-text,
+  .loading-text {
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+  }
+}
+
+/* Nozik animatsiyalar */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Yorqinlik effekti */
+@keyframes glow {
+  0% { box-shadow: 0 0 8px rgba(212, 175, 55, 0.4); }
+  50% { box-shadow: 0 0 15px rgba(212, 175, 55, 0.7); }
+  100% { box-shadow: 0 0 8px rgba(212, 175, 55, 0.4); }
+}
+
+.edit-button:hover,
+.edit-input:focus,
+.file-label:hover::before {
+  animation: glow 1.2s infinite;
+}

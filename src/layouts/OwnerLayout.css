@@ -1,0 +1,203 @@
+/* Umumiy stillar */
+body {
+  margin: 0;
+  font-family: 'Dancing Script', cursive;
+  background: linear-gradient(180deg, #0a0715 0%, #1c1124 100%);
+  color: #f7e0a3;
+  overflow-x: hidden;
+}
+
+/* Owner layout konteyneri */
+.owner-layout {
+  display: flex;
+  min-height: 100vh;
+  padding-top: 60px; /* Navbar balandligiga mos */
+}
+
+/* Sidebar stillari */
+.owner-sidebar {
+  position: fixed;
+  top: 60px; /* Navbar balandligiga mos */
+  left: 0;
+  width: 250px;
+  height: calc(100vh - 60px);
+  background: linear-gradient(180deg, #2c1b47 0%, #1a102e 100%);
+  box-shadow: 2px 0 20px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(212, 175, 55, 0.2);
+  border-right: 1px solid #d4af37;
+  z-index: 900;
+  padding: 1rem;
+  transition: transform 0.4s ease;
+}
+
+/* Sidebar sarlavhasi */
+.owner-sidebar__title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  color: #d4af37;
+  text-align: center;
+  margin: 1.5rem 0;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.7);
+  transition: transform 0.3s ease;
+}
+
+.owner-sidebar__title:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 15px rgba(212, 175, 55, 0.9);
+}
+
+/* Sidebar navigatsiyasi */
+.owner-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0 0.5rem;
+}
+
+/* Sidebar linklari */
+.owner-nav__link {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  color: #f7e0a3;
+  text-decoration: none;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.4rem;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.owner-nav__link:hover {
+  background: linear-gradient(45deg, #d4af37, #f0d68c);
+  color: #1c1124;
+  transform: translateX(5px);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.7);
+}
+
+.owner-nav__link.active {
+  background: linear-gradient(45deg, #d4af37, #f7e0a3);
+  color: #1c1124;
+  font-weight: bold;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.9);
+}
+
+/* Yorqinlik effekti */
+.owner-nav__link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: 0.5s;
+}
+
+.owner-nav__link:hover::before {
+  left: 100%;
+}
+
+/* Logout tugmasi */
+.owner-logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1rem;
+  background: linear-gradient(45deg, #b22222, #d43f3f);
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.4rem;
+  cursor: pointer;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  transition: all 0.3s ease;
+}
+
+.owner-logout-btn:hover {
+  background: linear-gradient(45deg, #c82333, #e54b4b);
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(178, 34, 34, 0.7);
+}
+
+/* Main content */
+.owner-content {
+  margin-left: 250px;
+  flex: 1;
+  padding: 2rem;
+  background: linear-gradient(135deg, #1c1124 0%, #0a0715 100%);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(212, 175, 55, 0.1);
+  position: relative;
+  overflow: hidden;
+  min-height: calc(100vh - 60px);
+}
+
+/* Main content fon effekti */
+.owner-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top left, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Responsiv dizayn */
+@media (max-width: 768px) {
+  .owner-sidebar {
+    width: 200px;
+    transform: translateX(-100%);
+  }
+
+  .owner-sidebar:hover {
+    transform: translateX(0);
+  }
+
+  .owner-content {
+    margin-left: 0;
+    padding: 1rem;
+  }
+
+  .owner-sidebar__title {
+    font-size: 1.6rem;
+  }
+
+  .owner-nav__link {
+    font-size: 1.2rem;
+    padding: 0.6rem 0.8rem;
+  }
+
+  .owner-logout-btn {
+    font-size: 1.2rem;
+    padding: 0.6rem 0.8rem;
+  }
+}
+
+/* Nozik animatsiyalar */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.owner-sidebar, .owner-content {
+  animation: fadeIn 0.6s ease-in;
+}
+
+/* Yorqinlik effekti */
+@keyframes glow {
+  0% { box-shadow: 0 0 8px rgba(212, 175, 55, 0.4); }
+  50% { box-shadow: 0 0 15px rgba(212, 175, 55, 0.7); }
+  100% { box-shadow: 0 0 8px rgba(212, 175, 55, 0.4); }
+}
+
+.owner-nav__link:hover, .owner-logout-btn:hover {
+  animation: glow 1.2s infinite;
+}

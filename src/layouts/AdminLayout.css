@@ -1,0 +1,240 @@
+/* Umumiy stillar */
+body {
+  margin: 0;
+  font-family: 'Dancing Script', cursive;
+  background: linear-gradient(180deg, #0a0715 0%, #1c1124 100%);
+  color: #f7e0a3;
+  overflow-x: hidden;
+}
+
+/* Sidebar stillari */
+.sidebar {
+  position: fixed;
+  top: 60px; /* Navbar balandligiga mos */
+  left: 0;
+  width: 80px;
+  height: calc(100vh - 60px);
+  background: linear-gradient(180deg, #2c1b47 0%, #1a102e 100%);
+  box-shadow: 2px 0 20px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(212, 175, 55, 0.2);
+  border-right: 1px solid #d4af37;
+  transition: width 0.4s ease;
+  z-index: 900;
+  overflow: hidden;
+}
+
+.sidebar.expanded {
+  width: 250px;
+}
+
+/* Sidebar sarlavhasi */
+.sidebar-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.8rem;
+  color: #d4af37;
+  text-align: center;
+  margin: 1.5rem 0;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar.expanded .sidebar-title {
+  opacity: 1;
+}
+
+/* Sidebar navigatsiyasi */
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0 1rem;
+}
+
+/* Sidebar linklari */
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.8rem 1rem;
+  color: #f7e0a3;
+  text-decoration: none;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.2rem;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.sidebar-link:hover {
+  background: linear-gradient(45deg, #d4af37, #f0d68c);
+  color: #1c1124;
+  transform: translateX(5px);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.7);
+}
+
+.sidebar-link.active {
+  background: linear-gradient(45deg, #d4af37, #f7e0a3);
+  color: #1c1124;
+  font-weight: bold;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.9);
+}
+
+/* Yorqinlik effekti */
+.sidebar-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: 0.5s;
+}
+
+.sidebar-link:hover::before {
+  left: 100%;
+}
+
+/* Sidebar ikonkalari */
+.sidebar-icon {
+  font-size: 1.2rem;
+  filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.6));
+}
+
+/* Sidebar yorliqlari */
+.sidebar-label {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar.expanded .sidebar-label {
+  opacity: 1;
+}
+
+/* Logout tugmasi */
+.logout-button {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.8rem 1rem;
+  background: linear-gradient(45deg, #b22222, #d43f3f);
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.2rem;
+  cursor: pointer;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  transition: all 0.3s ease;
+}
+
+.logout-button:hover {
+  background: linear-gradient(45deg, #c82333, #e54b4b);
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(178, 34, 34, 0.7);
+}
+
+.logout-label {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar.expanded .logout-label {
+  opacity: 1;
+}
+
+/* Main wrapper */
+.main-wrapper {
+  margin-left: 80px;
+  margin-top: 60px; /* Navbar balandligiga mos */
+  transition: margin-left 0.4s ease;
+  padding: 2rem;
+  min-height: calc(100vh - 60px);
+}
+
+.main-wrapper.expanded {
+  margin-left: 250px;
+}
+
+/* Main content */
+.main-content {
+  background: linear-gradient(135deg, #1c1124 0%, #0a0715 100%);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(212, 175, 55, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Main content fon effekti */
+.main-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top left, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Responsiv dizayn */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 60px;
+    top: 50px; /* Navbar balandligiga mos */
+  }
+
+  .sidebar.expanded {
+    width: 200px;
+  }
+
+  .main-wrapper {
+    margin-left: 60px;
+    padding: 1rem;
+  }
+
+  .main-wrapper.expanded {
+    margin-left: 200px;
+  }
+
+  .sidebar-title {
+    font-size: 1.5rem;
+  }
+
+  .sidebar-link {
+    font-size: 1rem;
+    padding: 0.6rem 0.8rem;
+  }
+
+  .logout-button {
+    padding: 0.6rem 0.8rem;
+    font-size: 1rem;
+  }
+}
+
+/* Nozik animatsiyalar */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.sidebar, .main-content {
+  animation: fadeIn 0.6s ease-in;
+}
+
+/* Yorqinlik effekti */
+@keyframes glow {
+  0% { box-shadow: 0 0 8px rgba(212, 175, 55, 0.4); }
+  50% { box-shadow: 0 0 15px rgba(212, 175, 55, 0.7); }
+  100% { box-shadow: 0 0 8px rgba(212, 175, 55, 0.4); }
+}
+
+.sidebar-link:hover, .logout-button:hover {
+  animation: glow 1.2s infinite;
+}

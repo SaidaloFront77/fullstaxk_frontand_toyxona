@@ -1,0 +1,300 @@
+/* Umumiy stillar */
+body {
+  margin: 0;
+  font-family: 'Dancing Script', cursive;
+  background: linear-gradient(180deg, #0a0715 0%, #1c1124 100%);
+  color: #f7e0a3;
+  overflow-x: hidden;
+}
+
+/* Toyxonalar konteyneri */
+.toyxonalar-container {
+  padding: 2rem;
+  margin-left: 80px; /* AdminLayout sidebar kengligiga mos */
+  min-height: calc(100vh - 60px); /* Navbar balandligiga mos */
+  background: linear-gradient(135deg, #1c1124 0%, #0a0715 100%);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(212, 175, 55, 0.1);
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 0.6s ease-in;
+}
+
+/* Fon effekti */
+.toyxonalar-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top left, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Sarlavha */
+.toyxonalar-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5rem;
+  color: #d4af37;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.7), 0 0 20px rgba(212, 175, 55, 0.4);
+  text-align: center;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.toyxonalar-title:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 15px rgba(212, 175, 55, 0.9);
+}
+
+/* Filterlar */
+.filters {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.filters select,
+.filters input {
+  padding: 0.6rem 1rem;
+  border: 1px solid #d4af37;
+  border-radius: 15px;
+  background: linear-gradient(45deg, #4a2e7b, #6b3fa0);
+  color: #f7e0a3;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.2rem;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23d4af37' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>");
+  background-repeat: no-repeat;
+  background-position: right 0.8rem center;
+  padding-right: 2rem;
+}
+
+.filters input {
+  background-image: none;
+  padding-right: 1rem;
+}
+
+.filters select:hover,
+.filters input:hover {
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.7);
+  transform: translateY(-2px);
+}
+
+.filters select:focus,
+.filters input:focus {
+  border-color: #f7e0a3;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.7);
+  transform: scale(1.02);
+}
+
+.filters input::placeholder {
+  color: rgba(247, 224, 163, 0.7);
+  font-family: 'Dancing Script', cursive;
+}
+
+/* Yuklanmoqda va xato xabarlari */
+.loading-text,
+.error-text {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.4rem;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 1rem 0;
+}
+
+.loading-text {
+  color: #d4af37;
+  background: rgba(212, 175, 55, 0.2);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+.error-text {
+  color: #ff4d4d;
+  background: rgba(178, 34, 34, 0.2);
+  box-shadow: 0 0 10px rgba(178, 34, 34, 0.5);
+  animation: shake 0.3s ease;
+}
+
+/* Shake animatsiyasi */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+/* Jadval stillari */
+.toyxonalar-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: linear-gradient(135deg, #2c1b47 0%, #1a102e 100%);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(212, 175, 55, 0.2);
+}
+
+/* Jadval sarlavhalari */
+.toyxonalar-table thead {
+  background: linear-gradient(45deg, #d4af37, #f0d68c);
+  color: #1c1124;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.3rem;
+}
+
+.toyxonalar-table th {
+  padding: 1rem;
+  text-align: left;
+  text-shadow: 0 0 5px rgba(28, 17, 36, 0.5);
+}
+
+/* Jadval qatorlari */
+.toyxonalar-table tbody tr {
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  transition: all 0.3s ease;
+}
+
+.toyxonalar-table tbody tr:hover {
+  background: linear-gradient(45deg, rgba(212, 175, 55, 0.1), rgba(247, 224, 163, 0.1));
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+.toyxonalar-table td {
+  padding: 1rem;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.2rem;
+  color: #f7e0a3;
+}
+
+/* Tugmalar */
+.approve-button,
+.delete-button {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  margin-right: 0.5rem;
+}
+
+.approve-button {
+  background: linear-gradient(45deg, #4a2e7b, #6b3fa0);
+  color: #f7e0a3;
+  box-shadow: 0 0 10px rgba(74, 46, 123, 0.5);
+}
+
+.approve-button:hover {
+  background: linear-gradient(45deg, #5b3a94, #7c4db6);
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.7);
+}
+
+.delete-button {
+  background: linear-gradient(45deg, #b22222, #d43f3f);
+  color: #fff;
+  box-shadow: 0 0 10px rgba(178, 34, 34, 0.5);
+}
+
+.delete-button:hover {
+  background: linear-gradient(45deg, #c82333, #e54b4b);
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(178, 34, 34, 0.7);
+}
+
+/* Tugma yorqinlik effekti */
+.approve-button::before,
+.delete-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: 0.5s;
+}
+
+.approve-button:hover::before,
+.delete-button:hover::before {
+  left: 100%;
+}
+
+/* Responsiv dizayn */
+@media (max-width: 768px) {
+  .toyxonalar-container {
+    margin-left: 60px; /* Mobil sidebar kengligiga mos */
+    padding: 1rem;
+  }
+
+  .toyxonalar-title {
+    font-size: 2rem;
+  }
+
+  .filters {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .filters select,
+  .filters input {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  .toyxonalar-table {
+    font-size: 1rem;
+  }
+
+  .toyxonalar-table th,
+  .toyxonalar-table td {
+    padding: 0.6rem;
+    font-size: 1rem;
+  }
+
+  .approve-button,
+  .delete-button {
+    padding: 0.5rem 0.8rem;
+    font-size: 1rem;
+  }
+
+  .loading-text,
+  .error-text {
+    font-size: 1.2rem;
+    padding: 0.6rem;
+  }
+}
+
+/* Nozik animatsiyalar */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Yorqinlik effekti */
+@keyframes glow {
+  0% { box-shadow: 0 0 8px rgba(212, 175, 55, 0.4); }
+  50% { box-shadow: 0 0 15px rgba(212, 175, 55, 0.7); }
+  100% { box-shadow: 0 0 8px rgba(212, 175, 55, 0.4); }
+}
+
+.approve-button:hover,
+.delete-button:hover,
+.filters select:hover,
+.filters input:focus {
+  animation: glow 1.2s infinite;
+}

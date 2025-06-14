@@ -1,0 +1,215 @@
+/* Umumiy stillar */
+body {
+  margin: 0;
+  font-family: 'Dancing Script', cursive;
+  background: linear-gradient(180deg, #0a0715 0%, #1c1124 100%);
+  color: #f7e0a3;
+  overflow-x: hidden;
+}
+
+/* Register konteyneri */
+.register-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #1c1124 0%, #0a0715 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Fon effekti */
+.register-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Register sarlavhasi */
+.register-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3rem;
+  color: #d4af37;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.7), 0 0 20px rgba(212, 175, 55, 0.4);
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.register-title:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 15px rgba(212, 175, 55, 0.9);
+}
+
+/* Xato xabari */
+.register-error {
+  color: #ff4d4d;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.2rem;
+  background: rgba(178, 34, 34, 0.2);
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0 10px rgba(178, 34, 34, 0.5);
+  animation: shake 0.3s ease;
+}
+
+/* Shake animatsiyasi xato xabari uchun */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+/* Forma stillari */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 400px;
+  background: linear-gradient(135deg, #2c1b47 0%, #1a102e 100%);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(212, 175, 55, 0.2);
+  border: 1px solid #d4af37;
+  animation: fadeIn 0.6s ease-in;
+}
+
+/* Input maydonlari */
+.register-input {
+  padding: 0.8rem 1rem;
+  border: 1px solid #d4af37;
+  border-radius: 15px;
+  background: linear-gradient(45deg, #4a2e7b, #6b3fa0);
+  color: #f7e0a3;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.2rem;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+}
+
+.register-input::placeholder {
+  color: rgba(247, 224, 163, 0.7);
+  font-family: 'Dancing Script', cursive;
+}
+
+.register-input:focus {
+  border-color: #f7e0a3;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.7);
+  transform: scale(1.02);
+}
+
+/* Yorqinlik effekti */
+.register-input::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: 0.5s;
+}
+
+.register-input:hover::before {
+  left: 100%;
+}
+
+/* Register tugmasi */
+.register-button {
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(45deg, #d4af37, #f0d68c);
+  color: #1c1124;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 15px rgba(212, 175, 55, 0.6);
+  position: relative;
+  overflow: hidden;
+}
+
+.register-button:hover {
+  background: linear-gradient(45deg, #e6c74c, #f7e0a3);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(212, 175, 55, 0.8);
+}
+
+/* Tugma yorqinlik effekti */
+.register-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: 0.5s;
+}
+
+.register-button:hover::before {
+  left: 100%;
+}
+
+/* Responsiv dizayn */
+@media (max-width: 768px) {
+  .register-container {
+    padding: 1rem;
+  }
+
+  .register-title {
+    font-size: 2.5rem;
+  }
+
+  .register-form {
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+
+  .register-input {
+    font-size: 1rem;
+    padding: 0.6rem 0.8rem;
+  }
+
+  .register-button {
+    font-size: 1.2rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .register-error {
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+  }
+}
+
+/* Nozik animatsiyalar */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.register-container {
+  animation: fadeIn 0.6s ease-in;
+}
+
+/* Yorqinlik effekti */
+@keyframes glow {
+  0% { box-shadow: 0 0 8px rgba(212, 175, 55, 0.4); }
+  50% { box-shadow: 0 0 15px rgba(212, 175, 55, 0.7); }
+  100% { box-shadow: 0 0 8px rgba(212, 175, 55, 0.4); }
+}
+
+.register-button:hover, .register-input:focus {
+  animation: glow 1.2s infinite;
+}
