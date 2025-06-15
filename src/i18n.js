@@ -4,7 +4,7 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import HttpApi from 'i18next-http-backend';
 
 i18n
-  .use(HttpApi)
+  .use(HttpsApi)
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
