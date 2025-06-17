@@ -5,13 +5,13 @@
   min-height: 100vh;
   padding: 120px 2rem 60px;
   background: linear-gradient(135deg, 
-    #000000 0%, 
-    #1a0033 20%,
-    #330066 40%,
-    #4d0099 60%,
-    #6600cc 80%,
-    #000000 100%
-  );
+    #263238 0%, 
+    #37474F 20%,
+    #455A64 40%,
+    #607D8B 60%,
+    #78909C 80%,
+    #263238 100%
+  ); /* Yorqin ko‘k va ochroq ko‘k tonlari */
   background-size: 400% 400%;
   animation: backgroundShift 15s ease-in-out infinite;
   position: relative;
@@ -25,10 +25,10 @@
   width: 100%;
   height: 100%;
   background: 
-    radial-gradient(circle at 20% 20%, rgba(255, 0, 128, 0.2) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(0, 255, 128, 0.2) 0%, transparent 50%),
-    radial-gradient(circle at 50% 50%, rgba(255, 255, 0, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 30% 70%, rgba(128, 0, 255, 0.15) 0%, transparent 50%);
+    radial-gradient(circle at 20% 20%, rgba(255, 202, 40, 0.2) 0%, transparent 50%), /* Yorqin sariq */
+    radial-gradient(circle at 80% 80%, rgba(207, 216, 220, 0.2) 0%, transparent 50%), /* Och kulrang */
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.15) 0%, transparent 50%), /* Oq */
+    radial-gradient(circle at 30% 70%, rgba(38, 50, 56, 0.15) 0%, transparent 50%); /* Yorqin ko‘k */
   animation: floatingLights 10s ease-in-out infinite;
   pointer-events: none;
 }
@@ -57,8 +57,8 @@
   text-align: center;
   margin-bottom: 3rem;
   background: linear-gradient(45deg, 
-    #ff0080, #ff4000, #ffff00, #00ff80, #0080ff, #8000ff
-  );
+    #FFCA28, #CFD8DC, #FFFFFF, #263238
+  ); /* Yorqin sariq, och kulrang, oq, yorqin ko‘k */
   background-size: 300% 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -66,9 +66,9 @@
   text-transform: uppercase;
   letter-spacing: 3px;
   text-shadow: 
-    0 0 30px rgba(255, 215, 0, 1),
-    0 0 50px rgba(255, 0, 128, 0.8),
-    0 0 70px rgba(0, 255, 128, 0.6);
+    0 0 30px rgba(255, 202, 40, 1), /* Yorqin sariq */
+    0 0 50px rgba(255, 202, 40, 0.8), /* Yorqin sariq */
+    0 0 70px rgba(207, 216, 220, 0.6); /* Och kulrang */
   animation: titleGradient 4s ease-in-out infinite;
   position: relative;
   z-index: 1;
@@ -88,22 +88,22 @@
   border-spacing: 0;
   background: linear-gradient(135deg, 
     rgba(255, 255, 255, 0.12) 0%,
-    rgba(255, 0, 128, 0.08) 25%,
-    rgba(255, 215, 0, 0.08) 50%,
-    rgba(0, 255, 128, 0.08) 75%,
+    rgba(255, 202, 40, 0.08) 25%, /* Yorqin sariq */
+    rgba(207, 216, 220, 0.08) 50%, /* Och kulrang */
+    rgba(38, 50, 56, 0.08) 75%, /* Yorqin ko‘k */
     rgba(255, 255, 255, 0.12) 100%
   );
   backdrop-filter: blur(25px);
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 
-    0 15px 50px rgba(255, 215, 0, 0.4),
-    0 0 80px rgba(102, 0, 204, 0.3),
-    inset 0 2px 0 rgba(255, 255, 255, 0.2);
+    0 15px 50px rgba(255, 202, 40, 0.4), /* Yorqin sariq */
+    0 0 80px rgba(38, 50, 56, 0.3), /* Yorqin ko‘k */
+    inset 0 2px 0 rgba(255, 255, 255, 0.2); /* Oq */
   border: 2px solid transparent;
   border-image: linear-gradient(45deg, 
-    #ff0080, #ff4000, #ffff00, #00ff80, #0080ff, #8000ff
-  ) 1;
+    #FFCA28, #CFD8DC, #FFFFFF, #263238
+  ) 1; /* Yorqin sariq, och kulrang, oq, yorqin ko‘k */
   position: relative;
   z-index: 1;
 }
@@ -116,9 +116,9 @@
   width: 100%;
   height: 100%;
   background: linear-gradient(45deg, 
-    rgba(255, 0, 128, 0.1), 
-    rgba(255, 215, 0, 0.1), 
-    rgba(0, 255, 128, 0.1)
+    rgba(255, 202, 40, 0.1), /* Yorqin sariq */
+    rgba(207, 216, 220, 0.1), /* Och kulrang */
+    rgba(38, 50, 56, 0.1) /* Yorqin ko‘k */
   );
   opacity: 0;
   transition: opacity 0.5s ease;
@@ -133,9 +133,9 @@
 /* Jadval boshi */
 .owner-bronlar-table thead {
   background: linear-gradient(135deg, 
-    rgba(255, 0, 128, 0.3) 0%,
-    rgba(255, 215, 0, 0.3) 50%,
-    rgba(0, 255, 128, 0.3) 100%
+    rgba(255, 202, 40, 0.3) 0%, /* Yorqin sariq */
+    rgba(207, 216, 220, 0.3) 50%, /* Och kulrang */
+    rgba(38, 50, 56, 0.3) 100% /* Yorqin ko‘k */
   );
 }
 
@@ -145,12 +145,12 @@
   font-family: 'Inter', sans-serif;
   font-size: 1.1rem;
   font-weight: 800;
-  color: #ffffff;
+  color: #FFFFFF; /* Oq */
   text-transform: uppercase;
   letter-spacing: 2px;
   text-shadow: 
-    0 0 15px rgba(255, 215, 0, 0.8),
-    0 2px 4px rgba(0, 0, 0, 0.5);
+    0 0 15px rgba(255, 202, 40, 0.8), /* Yorqin sariq */
+    0 2px 4px rgba(38, 50, 56, 0.5); /* Yorqin ko‘k */
   position: relative;
 }
 
@@ -162,8 +162,8 @@
   width: 100%;
   height: 3px;
   background: linear-gradient(90deg, 
-    #ff0080, #ff4000, #ffff00, #00ff80, #0080ff, #8000ff
-  );
+    #FFCA28, #CFD8DC, #FFFFFF, #263238
+  ); /* Yorqin sariq, och kulrang, oq, yorqin ko‘k */
   background-size: 200% 200%;
   animation: headerGlow 3s linear infinite;
 }
@@ -187,9 +187,9 @@
   width: 100%;
   height: 100%;
   background: linear-gradient(90deg, 
-    rgba(255, 0, 128, 0.15), 
-    rgba(255, 215, 0, 0.15), 
-    rgba(0, 255, 128, 0.15)
+    rgba(255, 202, 40, 0.15), /* Yorqin sariq */
+    rgba(207, 216, 220, 0.15), /* Och kulrang */
+    rgba(38, 50, 56, 0.15) /* Yorqin ko‘k */
   );
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -199,8 +199,8 @@
 .owner-bronlar-table tbody tr:hover {
   transform: scale(1.02);
   box-shadow: 
-    0 8px 25px rgba(255, 215, 0, 0.4),
-    inset 0 0 20px rgba(255, 255, 255, 0.1);
+    0 8px 25px rgba(255, 202, 40, 0.4), /* Yorqin sariq */
+    inset 0 0 20px rgba(255, 255, 255, 0.1); /* Oq */
 }
 
 .owner-bronlar-table tbody tr:hover::before {
@@ -212,9 +212,9 @@
   text-align: center;
   font-size: 1rem;
   font-weight: 600;
-  color: #ffffff;
-  border-bottom: 1px solid rgba(255, 215, 0, 0.2);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  color: #FFFFFF; /* Oq */
+  border-bottom: 1px solid rgba(255, 202, 40, 0.2); /* Yorqin sariq */
+  text-shadow: 0 1px 2px rgba(38, 50, 56, 0.3); /* Yorqin ko‘k */
   position: relative;
   z-index: 1;
 }
@@ -223,11 +223,11 @@
 .owner-bronlar-delete-btn {
   padding: 0.8rem 1.5rem;
   background: linear-gradient(135deg, 
-    #ff0040 0%, 
-    #ff4000 50%,
-    #ff8000 100%
-  );
-  color: #ffffff;
+    #FFCA28 0%, 
+    #CFD8DC 50%, 
+    #FFFFFF 100%
+  ); /* Yorqin sariq, och kulrang, oq */
+  color: #263238; /* Yorqin ko‘k */
   border: none;
   border-radius: 20px;
   font-family: 'Inter', sans-serif;
@@ -238,10 +238,10 @@
   cursor: pointer;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 
-    0 6px 20px rgba(255, 0, 64, 0.4),
-    0 0 30px rgba(255, 64, 0, 0.3),
-    inset 0 2px 0 rgba(255, 255, 255, 0.2);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    0 6px 20px rgba(255, 202, 40, 0.4), /* Yorqin sariq */
+    0 0 30px rgba(207, 216, 220, 0.3), /* Och kulrang */
+    inset 0 2px 0 rgba(255, 255, 255, 0.2); /* Oq */
+  text-shadow: 0 1px 2px rgba(38, 50, 56, 0.5); /* Yorqin ko‘k */
   position: relative;
   overflow: hidden;
 }
@@ -256,7 +256,7 @@
   background: linear-gradient(
     90deg, 
     transparent, 
-    rgba(255, 255, 255, 0.4), 
+    rgba(255, 255, 255, 0.4), /* Oq */
     transparent
   );
   transition: left 0.5s ease;
@@ -269,13 +269,13 @@
 .owner-bronlar-delete-btn:hover {
   transform: translateY(-3px) scale(1.05);
   background: linear-gradient(135deg, 
-    #ff0060 0%, 
-    #ff6000 50%,
-    #ffa000 100%
-  );
+    #CFD8DC 0%, 
+    #FFFFFF 50%, 
+    #263238 100%
+  ); /* Och kulrang, oq, yorqin ko‘k */
   box-shadow: 
-    0 10px 30px rgba(255, 0, 64, 0.6),
-    0 0 50px rgba(255, 64, 0, 0.5);
+    0 10px 30px rgba(255, 202, 40, 0.6), /* Yorqin sariq */
+    0 0 50px rgba(207, 216, 220, 0.5); /* Och kulrang */
 }
 
 .owner-bronlar-delete-btn:active {
@@ -284,9 +284,9 @@
 }
 
 @keyframes buttonPulse {
-  0% { box-shadow: 0 0 0 0 rgba(255, 0, 64, 0.8); }
-  50% { box-shadow: 0 0 0 15px rgba(255, 0, 64, 0.2); }
-  100% { box-shadow: 0 0 0 0 rgba(255, 0, 64, 0); }
+  0% { box-shadow: 0 0 0 0 rgba(255, 202, 40, 0.8); /* Yorqin sariq */ }
+  50% { box-shadow: 0 0 0 15px rgba(255, 202, 40, 0.2); /* Yorqin sariq */ }
+  100% { box-shadow: 0 0 0 0 rgba(255, 202, 40, 0); /* Yorqin sariq */ }
 }
 
 /* Loading va error */
@@ -295,18 +295,18 @@
   text-align: center;
   margin: 4rem 0;
   font-weight: 700;
-  text-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+  text-shadow: 0 0 20px rgba(255, 202, 40, 0.8); /* Yorqin sariq */
   position: relative;
   z-index: 1;
 }
 
 .loading-text {
-  color: #ffff00;
+  color: #FFFFFF; /* Oq */
   animation: loadingPulse 1.5s ease-in-out infinite;
 }
 
 .error-text {
-  color: #ff0080;
+  color: #FFFFFF; /* Oq */
 }
 
 @keyframes loadingPulse {
@@ -386,11 +386,11 @@
 
 /* Accessibility */
 .owner-bronlar-delete-btn:focus {
-  outline: 3px solid #ffff00;
+  outline: 3px solid #FFCA28; /* Yorqin sariq */
   outline-offset: 3px;
   box-shadow: 
-    0 0 0 6px rgba(255, 255, 0, 0.4),
-    0 10px 30px rgba(255, 0, 64, 0.6);
+    0 0 0 6px rgba(255, 202, 40, 0.4), /* Yorqin sariq */
+    0 10px 30px rgba(255, 202, 40, 0.6); /* Yorqin sariq */
 }
 
 /* Reduced motion */

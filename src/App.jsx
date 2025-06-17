@@ -19,10 +19,7 @@ const AppContent = () => {
 
   const { darkMode } = useTheme();
 
-  // 🌒 Tungi rejim uchun body'ga class
-  useEffect(() => {
-    document.body.className = darkMode ? 'dark' : '';
-  }, [darkMode]);
+
 
   return (
     <>

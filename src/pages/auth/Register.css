@@ -2,8 +2,8 @@
 body {
   margin: 0;
   font-family: 'Dancing Script', cursive;
-  background: linear-gradient(180deg, #0a0715 0%, #1c1124 100%);
-  color: #f7e0a3;
+  background: linear-gradient(180deg, #263238 0%, #37474F 100%); /* Yorqin ko‘k, ochroq ko‘k */
+  color: #FFFFFF; /* Oq */
   overflow-x: hidden;
 }
 
@@ -15,7 +15,7 @@ body {
   justify-content: center;
   min-height: 100vh;
   padding: 2rem;
-  background: linear-gradient(135deg, #1c1124 0%, #0a0715 100%);
+  background: linear-gradient(135deg, #263238 0%, #37474F 100%); /* Yorqin ko‘k, ochroq ko‘k */
   position: relative;
   overflow: hidden;
 }
@@ -28,7 +28,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at center, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
+  background: radial-gradient(circle at center, rgba(255, 202, 40, 0.15) 0%, transparent 70%); /* Yorqin sariq */
   opacity: 0.5;
   pointer-events: none;
 }
@@ -37,27 +37,27 @@ body {
 .register-title {
   font-family: 'Dancing Script', cursive;
   font-size: 3rem;
-  color: #d4af37;
-  text-shadow: 0 0 10px rgba(212, 175, 55, 0.7), 0 0 20px rgba(212, 175, 55, 0.4);
+  color: #FFCA28; /* Yorqin sariq */
+  text-shadow: 0 0 10px rgba(255, 202, 40, 0.7), 0 0 20px rgba(255, 202, 40, 0.4); /* Yorqin sariq */
   margin-bottom: 2rem;
   transition: transform 0.3s ease;
 }
 
 .register-title:hover {
   transform: scale(1.05);
-  text-shadow: 0 0 15px rgba(212, 175, 55, 0.9);
+  text-shadow: 0 0 15px rgba(255, 202, 40, 0.9); /* Yorqin sariq */
 }
 
 /* Xato xabari */
 .register-error {
-  color: #ff4d4d;
+  color: #FFFFFF; /* Oq */
   font-family: 'Dancing Script', cursive;
   font-size: 1.2rem;
-  background: rgba(178, 34, 34, 0.2);
+  background: rgba(38, 50, 56, 0.2); /* Yorqin ko‘k */
   padding: 0.8rem 1.5rem;
   border-radius: 10px;
   margin-bottom: 1.5rem;
-  box-shadow: 0 0 10px rgba(178, 34, 34, 0.5);
+  box-shadow: 0 0 10px rgba(38, 50, 56, 0.5); /* Yorqin ko‘k */
   animation: shake 0.3s ease;
 }
 
@@ -75,36 +75,36 @@ body {
   gap: 1.5rem;
   width: 100%;
   max-width: 400px;
-  background: linear-gradient(135deg, #2c1b47 0%, #1a102e 100%);
+  background: linear-gradient(135deg, #263238 0%, #37474F 100%); /* Yorqin ko‘k, ochroq ko‘k */
   padding: 2rem;
   border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(212, 175, 55, 0.2);
-  border: 1px solid #d4af37;
+  box-shadow: 0 4px 20px rgba(38, 50, 56, 0.5), inset 0 0 15px rgba(255, 202, 40, 0.2); /* Yorqin ko‘k, yorqin sariq */
+  border: 1px solid #FFCA28; /* Yorqin sariq */
   animation: fadeIn 0.6s ease-in;
 }
 
 /* Input maydonlari */
 .register-input {
   padding: 0.8rem 1rem;
-  border: 1px solid #d4af37;
+  border: 1px solid #FFCA28; /* Yorqin sariq */
   border-radius: 15px;
-  background: linear-gradient(45deg, #4a2e7b, #6b3fa0);
-  color: #f7e0a3;
+  background: linear-gradient(45deg, #263238, #37474F); /* Yorqin ko‘k, ochroq ko‘k */
+  color: #FFFFFF; /* Oq */
   font-family: 'Dancing Script', cursive;
   font-size: 1.2rem;
   outline: none;
   transition: all 0.3s ease;
-  box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+  box-shadow: 0 0 10px rgba(255, 202, 40, 0.4); /* Yorqin sariq */
 }
 
 .register-input::placeholder {
-  color: rgba(247, 224, 163, 0.7);
+  color: rgba(255, 255, 255, 0.7); /* Oq */
   font-family: 'Dancing Script', cursive;
 }
 
 .register-input:focus {
-  border-color: #f7e0a3;
-  box-shadow: 0 0 15px rgba(212, 175, 55, 0.7);
+  border-color: #FFFFFF; /* Oq */
+  box-shadow: 0 0 15px rgba(255, 202, 40, 0.7); /* Yorqin sariq */
   transform: scale(1.02);
 }
 
@@ -116,7 +116,7 @@ body {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent); /* Oq */
   transition: 0.5s;
 }
 
@@ -127,23 +127,23 @@ body {
 /* Register tugmasi */
 .register-button {
   padding: 0.8rem 1.5rem;
-  background: linear-gradient(45deg, #d4af37, #f0d68c);
-  color: #1c1124;
+  background: linear-gradient(45deg, #FFCA28, #CFD8DC); /* Yorqin sariq, och kulrang */
+  color: #263238; /* Yorqin ko‘k */
   font-family: 'Dancing Script', cursive;
   font-size: 1.4rem;
   border: none;
   border-radius: 15px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 3px 15px rgba(212, 175, 55, 0.6);
+  box-shadow: 0 3px 15px rgba(255, 202, 40, 0.6); /* Yorqin sariq */
   position: relative;
   overflow: hidden;
 }
 
 .register-button:hover {
-  background: linear-gradient(45deg, #e6c74c, #f7e0a3);
+  background: linear-gradient(45deg, #CFD8DC, #FFFFFF); /* Och kulrang, oq */
   transform: translateY(-2px);
-  box-shadow: 0 5px 20px rgba(212, 175, 55, 0.8);
+  box-shadow: 0 5px 20px rgba(255, 202, 40, 0.8); /* Yorqin sariq */
 }
 
 /* Tugma yorqinlik effekti */
@@ -154,7 +154,7 @@ body {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent); /* Oq */
   transition: 0.5s;
 }
 
@@ -205,9 +205,9 @@ body {
 
 /* Yorqinlik effekti */
 @keyframes glow {
-  0% { box-shadow: 0 0 8px rgba(212, 175, 55, 0.4); }
-  50% { box-shadow: 0 0 15px rgba(212, 175, 55, 0.7); }
-  100% { box-shadow: 0 0 8px rgba(212, 175, 55, 0.4); }
+  0% { box-shadow: 0 0 8px rgba(255, 202, 40, 0.4); /* Yorqin sariq */ }
+  50% { box-shadow: 0 0 15px rgba(255, 202, 40, 0.7); /* Yorqin sariq */ }
+  100% { box-shadow: 0 0 8px rgba(255, 202, 40, 0.4); /* Yorqin sariq */ }
 }
 
 .register-button:hover, .register-input:focus {

@@ -2,8 +2,8 @@
 body {
   margin: 0;
   font-family: 'Dancing Script', cursive;
-  background: linear-gradient(180deg, #0a0715 0%, #1c1124 100%);
-  color: #f7e0a3;
+  background: linear-gradient(180deg, #263238 0%, #37474F 100%); /* Yorqin ko‘k, ochroq ko‘k */
+  color: #FFFFFF; /* Oq */
   overflow-x: hidden;
 }
 
@@ -12,9 +12,9 @@ body {
   padding: 2rem;
   margin-left: 80px; /* AdminLayout sidebar kengligiga mos */
   min-height: calc(100vh - 60px); /* Navbar balandligiga mos */
-  background: linear-gradient(135deg, #1c1124 0%, #0a0715 100%);
+  background: linear-gradient(135deg, #263238 0%, #37474F 100%); /* Yorqin ko‘k, ochroq ko‘k */
   border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(212, 175, 55, 0.1);
+  box-shadow: 0 4px 20px rgba(38, 50, 56, 0.5), inset 0 0 15px rgba(255, 202, 40, 0.1); /* Yorqin ko‘k, yorqin sariq */
   position: relative;
   overflow: hidden;
   animation: fadeIn 0.6s ease-in;
@@ -28,7 +28,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at top left, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle at top left, rgba(255, 202, 40, 0.1) 0%, transparent 70%); /* Yorqin sariq */
   opacity: 0.5;
   pointer-events: none;
 }
@@ -37,8 +37,8 @@ body {
 .bronlar-title {
   font-family: 'Dancing Script', cursive;
   font-size: 2.5rem;
-  color: #d4af37;
-  text-shadow: 0 0 10px rgba(212, 175, 55, 0.7), 0 0 20px rgba(212, 175, 55, 0.4);
+  color: #FFCA28; /* Yorqin sariq */
+  text-shadow: 0 0 10px rgba(255, 202, 40, 0.7), 0 0 20px rgba(255, 202, 40, 0.4); /* Yorqin sariq */
   text-align: center;
   margin-bottom: 2rem;
   transition: transform 0.3s ease;
@@ -46,7 +46,7 @@ body {
 
 .bronlar-title:hover {
   transform: scale(1.05);
-  text-shadow: 0 0 15px rgba(212, 175, 55, 0.9);
+  text-shadow: 0 0 15px rgba(255, 202, 40, 0.9); /* Yorqin sariq */
 }
 
 /* Yuklanmoqda, xato va ma'lumot yo'q xabarlari */
@@ -62,22 +62,22 @@ body {
 }
 
 .loading-text {
-  color: #d4af37;
-  background: rgba(212, 175, 55, 0.2);
-  box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+  color: #FFCA28; /* Yorqin sariq */
+  background: rgba(255, 202, 40, 0.2); /* Yorqin sariq */
+  box-shadow: 0 0 10px rgba(255, 202, 40, 0.5); /* Yorqin sariq */
 }
 
 .error-text {
-  color: #ff4d4d;
-  background: rgba(178, 34, 34, 0.2);
-  box-shadow: 0 0 10px rgba(178, 34, 34, 0.5);
+  color: #FFFFFF; /* Oq */
+  background: rgba(38, 50, 56, 0.2); /* Yorqin ko‘k */
+  box-shadow: 0 0 10px rgba(38, 50, 56, 0.5); /* Yorqin ko‘k */
   animation: shake 0.3s ease;
 }
 
 .no-data-text {
-  color: #f7e0a3;
-  background: rgba(74, 46, 123, 0.2);
-  box-shadow: 0 0 10px rgba(74, 46, 123, 0.5);
+  color: #FFFFFF; /* Oq */
+  background: rgba(55, 71, 79, 0.2); /* Ochroq ko‘k */
+  box-shadow: 0 0 10px rgba(55, 71, 79, 0.5); /* Ochroq ko‘k */
 }
 
 /* Shake animatsiyasi */
@@ -97,18 +97,18 @@ body {
 
 /* Bron kartasi */
 .bron-card {
-  background: linear-gradient(135deg, #2c1b47 0%, #1a102e 100%);
-  border: 1px solid #d4af37;
+  background: linear-gradient(135deg, #263238 0%, #37474F 100%); /* Yorqin ko‘k, ochroq ko‘k */
+  border: 1px solid #FFCA28; /* Yorqin sariq */
   border-radius: 15px;
   padding: 1.5rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(212, 175, 55, 0.2);
+  box-shadow: 0 4px 15px rgba(38, 50, 56, 0.5), inset 0 0 10px rgba(255, 202, 40, 0.2); /* Yorqin ko‘k, yorqin sariq */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   animation: cardFadeIn 0.6s ease-in;
 }
 
 .bron-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.7);
+  box-shadow: 0 8px 20px rgba(255, 202, 40, 0.7); /* Yorqin sariq */
 }
 
 /* Karta animatsiyasi */
@@ -124,7 +124,7 @@ body {
   gap: 0.8rem;
   font-family: 'Dancing Script', cursive;
   font-size: 1.2rem;
-  color: #f7e0a3;
+  color: #FFFFFF; /* Oq */
 }
 
 .bron-info p {
@@ -132,8 +132,8 @@ body {
 }
 
 .bron-info strong {
-  color: #d4af37;
-  text-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
+  color: #FFCA28; /* Yorqin sariq */
+  text-shadow: 0 0 5px rgba(255, 202, 40, 0.5); /* Yorqin sariq */
 }
 
 /* Status stillari */
@@ -144,41 +144,41 @@ body {
 }
 
 .status.tasdiqlangan {
-  background: linear-gradient(45deg, #4a2e7b, #6b3fa0);
-  box-shadow: 0 0 10px rgba(74, 46, 123, 0.5);
+  background: linear-gradient(45deg, #263238, #37474F); /* Yorqin ko‘k, ochroq ko‘k */
+  box-shadow: 0 0 10px rgba(38, 50, 56, 0.5); /* Yorqin ko‘k */
 }
 
 .status.kutilmoqda {
-  background: linear-gradient(45deg, #d4af37, #f0d68c);
-  color: #1c1124;
-  box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+  background: linear-gradient(45deg, #FFCA28, #CFD8DC); /* Yorqin sariq, och kulrang */
+  color: #263238; /* Yorqin ko‘k */
+  box-shadow: 0 0 10px rgba(255, 202, 40, 0.5); /* Yorqin sariq */
 }
 
 .status.bekorqilingan {
-  background: linear-gradient(45deg, #b22222, #d43f3f);
-  box-shadow: 0 0 10px rgba(178, 34, 34, 0.5);
+  background: linear-gradient(45deg, #263238, #37474F); /* Yorqin ko‘k, ochroq ko‘k */
+  box-shadow: 0 0 10px rgba(38, 50, 56, 0.5); /* Yorqin ko‘k */
 }
 
 /* Bekor qilish tugmasi */
 .delete-button {
   padding: 0.6rem 1rem;
-  background: linear-gradient(45deg, #b22222, #d43f3f);
-  color: #fff;
+  background: linear-gradient(45deg, #263238, #37474F); /* Yorqin ko‘k, ochroq ko‘k */
+  color: #FFFFFF; /* Oq */
   font-family: 'Dancing Script', cursive;
   font-size: 1.1rem;
   border: none;
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 0 10px rgba(178, 34, 34, 0.5);
+  box-shadow: 0 0 10px rgba(38, 50, 56, 0.5); /* Yorqin ko‘k */
   position: relative;
   overflow: hidden;
 }
 
 .delete-button:hover {
-  background: linear-gradient(45deg, #c82333, #e54b4b);
+  background: linear-gradient(45deg, #37474F, #CFD8DC); /* Ochroq ko‘k, och kulrang */
   transform: translateY(-2px);
-  box-shadow: 0 0 15px rgba(178, 34, 34, 0.7);
+  box-shadow: 0 0 15px rgba(255, 202, 40, 0.7); /* Yorqin sariq */
 }
 
 /* Tugma yorqinlik effekti */
@@ -189,7 +189,7 @@ body {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent); /* Oq */
   transition: 0.5s;
 }
 
@@ -242,9 +242,9 @@ body {
 
 /* Yorqinlik effekti */
 @keyframes glow {
-  0% { box-shadow: 0 0 8px rgba(212, 175, 55, 0.4); }
-  50% { box-shadow: 0 0 15px rgba(212, 175, 55, 0.7); }
-  100% { box-shadow: 0 0 8px rgba(212, 175, 55, 0.4); }
+  0% { box-shadow: 0 0 8px rgba(255, 202, 40, 0.4); /* Yorqin sariq */ }
+  50% { box-shadow: 0 0 15px rgba(255, 202, 40, 0.7); /* Yorqin sariq */ }
+  100% { box-shadow: 0 0 8px rgba(255, 202, 40, 0.4); /* Yorqin sariq */ }
 }
 
 .delete-button:hover {

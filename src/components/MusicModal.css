@@ -1,6 +1,6 @@
-/* ===== MUSIC MODAL - NAVBAR BILAN HAMOHANG YORQIN DIZAYN ===== */
+/* ===== MUSIC MODAL - NAVBAR BILAN HAMOHANG YORQINROQ VA SKROMNIY DIZAYN ===== */
 
-/* Modal overlay - navbar bilan mos ranglar */
+/* Modal overlay */
 .music-modal-overlay {
   position: fixed;
   top: 0;
@@ -8,14 +8,9 @@
   width: 100%;
   height: 100%;
   background: linear-gradient(135deg, 
-    rgba(0, 0, 0, 0.95) 0%, 
-    rgba(26, 0, 51, 0.9) 15%,
-    rgba(51, 0, 102, 0.85) 30%,
-    rgba(77, 0, 153, 0.9) 45%,
-    rgba(102, 0, 204, 0.85) 60%,
-    rgba(77, 0, 153, 0.9) 75%,
-    rgba(26, 0, 51, 0.9) 90%,
-    rgba(0, 0, 0, 0.95) 100%
+    rgba(38, 50, 56, 0.95) 0%, /* Yorqin ko‘k */
+    rgba(55, 71, 79, 0.9) 50%, /* Ochroq ko‘k */
+    rgba(38, 50, 56, 0.95) 100% /* Yorqin ko‘k */
   );
   backdrop-filter: blur(25px);
   display: flex;
@@ -34,10 +29,10 @@
   width: 100%;
   height: 100%;
   background: 
-    radial-gradient(circle at 20% 50%, rgba(255, 0, 128, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 80% 50%, rgba(0, 255, 128, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 50% 20%, rgba(255, 255, 0, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 50% 80%, rgba(128, 0, 255, 0.1) 0%, transparent 50%);
+    radial-gradient(circle at 20% 50%, rgba(255, 202, 40, 0.15) 0%, transparent 50%), /* Yorqin sariq */
+    radial-gradient(circle at 80% 50%, rgba(207, 216, 220, 0.15) 0%, transparent 50%), /* Och kulrang */
+    radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%), /* Oq */
+    radial-gradient(circle at 50% 80%, rgba(38, 50, 56, 0.1) 0%, transparent 50%); /* Yorqin ko‘k */
   opacity: 0.8;
   pointer-events: none;
   animation: modalRainbowShift 8s ease-in-out infinite;
@@ -66,21 +61,16 @@
   }
 }
 
-/* Modal oynasi - navbar stiliga mos */
+/* Modal oynasi */
 .music-modal {
   background: linear-gradient(135deg, 
-    #000000 0%, 
-    #1a0033 15%,
-    #330066 30%,
-    #4d0099 45%,
-    #6600cc 60%,
-    #4d0099 75%,
-    #1a0033 90%,
-    #000000 100%
+    #263238 0%, /* Yorqin ko‘k */
+    #37474F 50%, /* Ochroq ko‘k */
+    #263238 100% /* Yorqin ko‘k */
   );
   border: 3px solid transparent;
   border-image: linear-gradient(90deg, 
-    #ff0080, #ff4000, #ffff00, #00ff80, #0080ff, #8000ff, #ff0080
+    #FFCA28, #CFD8DC /* Yorqin sariq, och kulrang */
   ) 1;
   border-radius: 25px;
   padding: 2.5rem;
@@ -89,10 +79,10 @@
   max-height: 90vh;
   overflow-y: auto;
   box-shadow: 
-    0 20px 60px rgba(255, 215, 0, 0.4),
-    0 0 0 3px rgba(255, 215, 0, 0.6),
-    inset 0 3px 0 rgba(255, 215, 0, 0.3),
-    0 0 80px rgba(102, 0, 204, 0.3);
+    0 20px 60px rgba(255, 202, 40, 0.4), /* Yorqin sariq */
+    0 0 0 3px rgba(255, 202, 40, 0.6), /* Yorqin sariq */
+    inset 0 3px 0 rgba(255, 255, 255, 0.3), /* Oq */
+    0 0 80px rgba(38, 50, 56, 0.3); /* Yorqin ko‘k */
   position: relative;
   animation: modalSlideIn 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   backdrop-filter: blur(30px);
@@ -107,14 +97,12 @@
   width: 100%;
   height: 100%;
   background: 
-    radial-gradient(circle at 30% 40%, rgba(255, 0, 128, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 70% 60%, rgba(0, 255, 128, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 30% 40%, rgba(255, 202, 40, 0.1) 0%, transparent 50%), /* Yorqin sariq */
+    radial-gradient(circle at 70% 60%, rgba(207, 216, 220, 0.1) 0%, transparent 50%), /* Och kulrang */
     linear-gradient(45deg, 
-      rgba(255, 0, 128, 0.05) 0%, 
-      rgba(255, 128, 0, 0.05) 25%, 
-      rgba(255, 255, 0, 0.05) 50%, 
-      rgba(0, 255, 128, 0.05) 75%, 
-      rgba(0, 128, 255, 0.05) 100%
+      rgba(255, 202, 40, 0.05) 0%, /* Yorqin sariq */
+      rgba(207, 216, 220, 0.05) 50%, /* Och kulrang */
+      rgba(38, 50, 56, 0.05) 100% /* Yorqin ko‘k */
     );
   opacity: 0.8;
   pointer-events: none;
@@ -135,13 +123,13 @@
   }
 }
 
-/* Modal sarlavha - navbar logo stiliga mos */
+/* Modal sarlavha */
 .music-modal h2 {
   font-family: 'Playfair Display', 'Georgia', serif;
   font-size: 2.8rem;
   font-weight: 800;
   background: linear-gradient(45deg, 
-    #ff0080, #ff4000, #ffff00, #00ff80, #0080ff, #8000ff
+    #FFCA28, #CFD8DC /* Yorqin sariq, och kulrang */
   );
   background-size: 300% 300%;
   -webkit-background-clip: text;
@@ -150,9 +138,8 @@
   text-transform: uppercase;
   letter-spacing: 4px;
   text-shadow: 
-    0 0 30px rgba(255, 215, 0, 1),
-    0 0 50px rgba(255, 0, 128, 0.8),
-    0 0 70px rgba(0, 255, 128, 0.6);
+    0 0 30px rgba(255, 202, 40, 0.8), /* Yorqin sariq */
+    0 0 50px rgba(255, 255, 255, 0.6); /* Oq */
   text-align: center;
   margin-bottom: 2rem;
   position: relative;
@@ -169,20 +156,19 @@
   width: 0;
   height: 4px;
   background: linear-gradient(90deg, 
-    #ff0080, #ff4000, #ffff00, #00ff80, #0080ff, #8000ff
+    #FFCA28, #CFD8DC /* Yorqin sariq, och kulrang */
   );
   background-size: 200% 200%;
   animation: titleUnderline 3s ease-in-out infinite, gradientFlow 2s linear infinite;
   border-radius: 2px;
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+  box-shadow: 0 0 20px rgba(255, 202, 40, 0.6); /* Yorqin sariq */
 }
 
 .music-modal h2:hover {
   transform: scale(1.05) translateY(-3px);
   text-shadow: 
-    0 0 40px rgba(255, 215, 0, 1),
-    0 0 60px rgba(255, 0, 128, 1),
-    0 0 80px rgba(0, 255, 128, 0.8);
+    0 0 40px rgba(255, 202, 40, 1), /* Yorqin sariq */
+    0 0 60px rgba(255, 255, 255, 0.8); /* Oq */
 }
 
 .music-modal h2:hover::after {
@@ -213,12 +199,11 @@
   overflow-y: auto;
   border-radius: 15px;
   background: linear-gradient(135deg, 
-    rgba(255, 0, 128, 0.1), 
-    rgba(255, 215, 0, 0.1), 
-    rgba(0, 255, 128, 0.1)
+    rgba(255, 202, 40, 0.1), /* Yorqin sariq */
+    rgba(207, 216, 220, 0.1) /* Och kulrang */
   );
   backdrop-filter: blur(15px);
-  border: 2px solid rgba(255, 215, 0, 0.3);
+  border: 2px solid rgba(255, 202, 40, 0.3); /* Yorqin sariq */
   padding: 1rem;
 }
 
@@ -228,18 +213,18 @@
 
 .music-modal ul::-webkit-scrollbar-track {
   background: linear-gradient(180deg, 
-    rgba(255, 0, 128, 0.2), 
-    rgba(0, 255, 128, 0.2)
+    rgba(255, 202, 40, 0.2), /* Yorqin sariq */
+    rgba(207, 216, 220, 0.2) /* Och kulrang */
   );
   border-radius: 10px;
 }
 
 .music-modal ul::-webkit-scrollbar-thumb {
   background: linear-gradient(180deg, 
-    #ff0080, #ffff00, #00ff80
+    #FFCA28, #CFD8DC /* Yorqin sariq, och kulrang */
   );
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+  box-shadow: 0 0 10px rgba(255, 202, 40, 0.6); /* Yorqin sariq */
 }
 
 .music-modal ul li {
@@ -250,10 +235,10 @@
   margin-bottom: 0.5rem;
   border-radius: 12px;
   background: linear-gradient(135deg, 
-    rgba(0, 0, 0, 0.3), 
-    rgba(26, 0, 51, 0.3)
+    rgba(38, 50, 56, 0.3), /* Yorqin ko‘k */
+    rgba(55, 71, 79, 0.3) /* Ochroq ko‘k */
   );
-  border: 1px solid rgba(255, 215, 0, 0.2);
+  border: 1px solid rgba(255, 202, 40, 0.2); /* Yorqin sariq */
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
@@ -268,7 +253,7 @@
   height: 100%;
   background: linear-gradient(90deg, 
     transparent, 
-    rgba(255, 215, 0, 0.2), 
+    rgba(255, 202, 40, 0.2), /* Yorqin sariq */
     transparent
   );
   transition: left 0.6s ease;
@@ -280,25 +265,24 @@
 
 .music-modal ul li:hover {
   background: linear-gradient(135deg, 
-    rgba(255, 0, 128, 0.2), 
-    rgba(255, 215, 0, 0.2), 
-    rgba(0, 255, 128, 0.2)
+    rgba(255, 202, 40, 0.2), /* Yorqin sariq */
+    rgba(207, 216, 220, 0.2) /* Och kulrang */
   );
-  border-color: rgba(255, 215, 0, 0.6);
+  border-color: rgba(255, 202, 40, 0.6); /* Yorqin sariq */
   transform: translateX(5px) scale(1.02);
   box-shadow: 
-    0 5px 20px rgba(255, 215, 0, 0.4),
-    0 0 30px rgba(255, 0, 128, 0.3);
+    0 5px 20px rgba(255, 202, 40, 0.4), /* Yorqin sariq */
+    0 0 30px rgba(38, 50, 56, 0.3); /* Yorqin ko‘k */
 }
 
-/* Qo'shiq tugmasi - navbar tugma stiliga mos */
+/* Qo'shiq tugmasi */
 .music-modal ul li button {
   background: none;
   border: none;
   font-family: 'Inter', sans-serif;
   font-size: 1.1rem;
   font-weight: 600;
-  color: #f7e0a3;
+  color: #FFFFFF; /* Oq */
   cursor: pointer;
   text-align: left;
   flex-grow: 1;
@@ -312,18 +296,14 @@
 
 .music-modal ul li button.active {
   background: linear-gradient(135deg, 
-    #ff0080 0%, 
-    #ff4000 25%,
-    #ffff00 50%, 
-    #00ff80 75%,
-    #0080ff 100%
+    #FFCA28, #CFD8DC /* Yorqin sariq, och kulrang */
   );
   background-size: 300% 300%;
-  color: #ffffff;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  color: #263238; /* Yorqin ko‘k */
+  text-shadow: 0 0 10px rgba(38, 50, 56, 0.8); /* Yorqin ko‘k */
   box-shadow: 
-    0 0 20px rgba(255, 215, 0, 0.6),
-    inset 0 2px 0 rgba(255, 255, 255, 0.4);
+    0 0 20px rgba(255, 202, 40, 0.6), /* Yorqin sariq */
+    inset 0 2px 0 rgba(255, 255, 255, 0.4); /* Oq */
   animation: activeGradient 3s ease-in-out infinite;
 }
 
@@ -333,35 +313,35 @@
 }
 
 .music-modal ul li button:hover {
-  color: #ffff00;
-  text-shadow: 0 0 15px rgba(255, 255, 0, 0.8);
+  color: #FFCA28; /* Yorqin sariq */
+  text-shadow: 0 0 15px rgba(255, 202, 40, 0.8); /* Yorqin sariq */
   transform: translateX(3px);
 }
 
 /* Download havolasi */
 .music-modal ul li a {
   font-size: 1.2rem;
-  color: #ffff00;
+  color: #FFCA28; /* Yorqin sariq */
   text-decoration: none;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   padding: 0.5rem;
   border-radius: 8px;
   background: linear-gradient(135deg, 
-    rgba(255, 215, 0, 0.2), 
-    rgba(255, 255, 0, 0.2)
+    rgba(255, 202, 40, 0.2), /* Yorqin sariq */
+    rgba(207, 216, 220, 0.2) /* Och kulrang */
   );
-  border: 1px solid rgba(255, 215, 0, 0.4);
+  border: 1px solid rgba(255, 202, 40, 0.4); /* Yorqin sariq */
 }
 
 .music-modal ul li a:hover {
   transform: scale(1.3) rotate(10deg);
-  color: #ff0080;
-  text-shadow: 0 0 15px rgba(255, 0, 128, 0.8);
+  color: #FFFFFF; /* Oq */
+  text-shadow: 0 0 15px rgba(255, 202, 40, 0.8); /* Yorqin sariq */
   background: linear-gradient(135deg, 
-    rgba(255, 0, 128, 0.3), 
-    rgba(255, 215, 0, 0.3)
+    rgba(255, 202, 40, 0.3), /* Yorqin sariq */
+    rgba(207, 216, 220, 0.3) /* Och kulrang */
   );
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+  box-shadow: 0 0 20px rgba(255, 202, 40, 0.6); /* Yorqin sariq */
 }
 
 /* Cover rasmi */
@@ -372,12 +352,12 @@
   border-radius: 15px;
   margin-bottom: 1.5rem;
   box-shadow: 
-    0 10px 30px rgba(255, 215, 0, 0.4),
-    0 0 50px rgba(255, 0, 128, 0.3),
-    inset 0 0 30px rgba(255, 255, 255, 0.1);
+    0 10px 30px rgba(255, 202, 40, 0.4), /* Yorqin sariq */
+    0 0 50px rgba(38, 50, 56, 0.3), /* Yorqin ko‘k */
+    inset 0 0 30px rgba(255, 255, 255, 0.1); /* Oq */
   border: 3px solid transparent;
   border-image: linear-gradient(45deg, 
-    #ff0080, #ffff00, #00ff80, #0080ff
+    #FFCA28, #CFD8DC /* Yorqin sariq, och kulrang */
   ) 1;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -385,11 +365,11 @@
 .music-modal img:hover {
   transform: scale(1.05) rotateY(5deg);
   box-shadow: 
-    0 15px 40px rgba(255, 215, 0, 0.6),
-    0 0 70px rgba(255, 0, 128, 0.5);
+    0 15px 40px rgba(255, 202, 40, 0.6), /* Yorqin sariq */
+    0 0 70px rgba(38, 50, 56, 0.5); /* Yorqin ko‘k */
 }
 
-/* Boshqaruv tugmalari - navbar tugma stiliga mos */
+/* Boshqaruv tugmalari */
 .music-modal div[style*="justify-content: space-between"] {
   display: flex;
   justify-content: space-between;
@@ -428,7 +408,7 @@
   background: linear-gradient(
     90deg, 
     transparent, 
-    rgba(255, 255, 255, 0.8), 
+    rgba(255, 255, 255, 0.8), /* Oq */
     transparent
   );
   transition: left 0.8s ease;
@@ -447,8 +427,8 @@
   width: 0;
   height: 0;
   background: radial-gradient(circle, 
-    rgba(255, 255, 255, 0.5) 0%, 
-    rgba(255, 215, 0, 0.3) 30%,
+    rgba(255, 255, 255, 0.5) 0%, /* Oq */
+    rgba(255, 202, 40, 0.3) 30%, /* Yorqin sariq */
     transparent 70%
   );
   transition: all 0.5s ease;
@@ -463,40 +443,40 @@
 
 /* Har bir tugma uchun alohida ranglar */
 .music-modal div[style*="justify-content: space-between"] button:nth-child(1) {
-  background: linear-gradient(135deg, #8000ff 0%, #4000ff 50%, #0080ff 100%);
-  color: #ffffff;
-  border: 2px solid rgba(128, 0, 255, 0.5);
-  box-shadow: 0 6px 20px rgba(128, 0, 255, 0.6);
+  background: linear-gradient(135deg, #263238, #37474F); /* Yorqin ko‘k, ochroq ko‘k */
+  color: #FFFFFF; /* Oq */
+  border: 2px solid rgba(255, 202, 40, 0.5); /* Yorqin sariq */
+  box-shadow: 0 6px 20px rgba(38, 50, 56, 0.6); /* Yorqin ko‘k */
 }
 
 .music-modal div[style*="justify-content: space-between"] button:nth-child(2) {
-  background: linear-gradient(135deg, #ff0080 0%, #ff4000 50%, #ffff00 100%);
-  color: #ffffff;
-  border: 2px solid rgba(255, 215, 0, 0.8);
-  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.6);
+  background: linear-gradient(135deg, #FFCA28, #CFD8DC); /* Yorqin sariq, och kulrang */
+  color: #263238; /* Yorqin ko‘k */
+  border: 2px solid rgba(255, 202, 40, 0.8); /* Yorqin sariq */
+  box-shadow: 0 6px 20px rgba(255, 202, 40, 0.6); /* Yorqin sariq */
 }
 
 .music-modal div[style*="justify-content: space-between"] button:nth-child(3) {
-  background: linear-gradient(135deg, #00ff80 0%, #0080ff 50%, #8000ff 100%);
-  color: #ffffff;
-  border: 2px solid rgba(0, 255, 128, 0.5);
-  box-shadow: 0 6px 20px rgba(0, 255, 128, 0.6);
+  background: linear-gradient(135deg, #CFD8DC, #263238); /* Och kulrang, yorqin ko‘k */
+  color: #FFFFFF; /* Oq */
+  border: 2px solid rgba(255, 202, 40, 0.5); /* Yorqin sariq */
+  box-shadow: 0 6px 20px rgba(207, 216, 220, 0.6); /* Och kulrang */
 }
 
 .music-modal div[style*="justify-content: space-between"] button:nth-child(4) {
-  background: linear-gradient(135deg, #ff4000 0%, #ffff00 50%, #00ff80 100%);
-  color: #000000;
+  background: linear-gradient(135deg, #FFCA28, #263238); /* Yorqin sariq, yorqin ko‘k */
+  color: #FFFFFF; /* Oq */
   font-weight: 800;
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
-  border: 2px solid rgba(255, 215, 0, 0.9);
-  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.7);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8); /* Oq */
+  border: 2px solid rgba(255, 202, 40, 0.9); /* Yorqin sariq */
+  box-shadow: 0 6px 20px rgba(255, 202, 40, 0.7); /* Yorqin sariq */
 }
 
 .music-modal div[style*="justify-content: space-between"] button:hover {
   transform: translateY(-4px) scale(1.05);
   box-shadow: 
-    0 12px 30px rgba(255, 215, 0, 0.8),
-    0 0 50px rgba(255, 0, 128, 0.4);
+    0 12px 30px rgba(255, 202, 40, 0.8), /* Yorqin sariq */
+    0 0 50px rgba(38, 50, 56, 0.4); /* Yorqin ko‘k */
 }
 
 /* Ovoz balandligi sozlagichi */
@@ -504,20 +484,19 @@
   margin-top: 1.5rem;
   padding: 1.5rem;
   background: linear-gradient(135deg, 
-    rgba(255, 0, 128, 0.1), 
-    rgba(255, 215, 0, 0.1), 
-    rgba(0, 255, 128, 0.1)
+    rgba(255, 202, 40, 0.1), /* Yorqin sariq */
+    rgba(207, 216, 220, 0.1) /* Och kulrang */
   );
   border-radius: 15px;
   backdrop-filter: blur(15px);
-  border: 2px solid rgba(255, 215, 0, 0.3);
+  border: 2px solid rgba(255, 202, 40, 0.3); /* Yorqin sariq */
 }
 
 .music-modal label {
   font-family: 'Inter', sans-serif;
   font-size: 1.2rem;
   font-weight: 600;
-  background: linear-gradient(45deg, #ffff00, #00ff80, #0080ff);
+  background: linear-gradient(45deg, #FFCA28, #CFD8DC); /* Yorqin sariq, och kulrang */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -530,12 +509,8 @@
   width: 100%;
   -webkit-appearance: none;
   background: linear-gradient(to right, 
-    #ff0080 0%, 
-    #ff4000 20%,
-    #ffff00 40%, 
-    #00ff80 60%,
-    #0080ff 80%,
-    #8000ff 100%
+    #FFCA28 0%, /* Yorqin sariq */
+    #CFD8DC 100% /* Och kulrang */
   );
   height: 10px;
   border-radius: 10px;
@@ -543,15 +518,15 @@
   margin-top: 1rem;
   cursor: pointer;
   box-shadow: 
-    0 0 20px rgba(255, 215, 0, 0.4),
-    inset 0 0 10px rgba(255, 255, 255, 0.2);
+    0 0 20px rgba(255, 202, 40, 0.4), /* Yorqin sariq */
+    inset 0 0 10px rgba(255, 255, 255, 0.2); /* Oq */
   transition: all 0.3s ease;
 }
 
 .music-modal input[type="range"]:hover {
   box-shadow: 
-    0 0 30px rgba(255, 215, 0, 0.8),
-    inset 0 0 15px rgba(255, 255, 255, 0.3);
+    0 0 30px rgba(255, 202, 40, 0.8), /* Yorqin sariq */
+    inset 0 0 15px rgba(255, 255, 255, 0.3); /* Oq */
   transform: scaleY(1.2);
 }
 
@@ -559,11 +534,11 @@
   -webkit-appearance: none;
   width: 20px;
   height: 20px;
-  background: linear-gradient(45deg, #ffff00, #ff0080);
+  background: linear-gradient(45deg, #FFCA28, #CFD8DC); /* Yorqin sariq, och kulrang */
   border-radius: 50%;
   box-shadow: 
-    0 0 15px rgba(255, 215, 0, 1),
-    0 0 25px rgba(255, 0, 128, 0.8);
+    0 0 15px rgba(255, 202, 40, 0.8), /* Yorqin sariq */
+    0 0 25px rgba(38, 50, 56, 0.6); /* Yorqin ko‘k */
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -571,15 +546,15 @@
 .music-modal input[type="range"]::-webkit-slider-thumb:hover {
   transform: scale(1.3);
   box-shadow: 
-    0 0 25px rgba(255, 215, 0, 1),
-    0 0 35px rgba(255, 0, 128, 1);
+    0 0 25px rgba(255, 202, 40, 1), /* Yorqin sariq */
+    0 0 35px rgba(38, 50, 56, 0.8); /* Yorqin ko‘k */
 }
 
 /* Takrorlash tugmasi */
 .music-modal button[style*="margin-top: 10px"] {
   padding: 1rem 2rem;
-  background: linear-gradient(135deg, #4a2e7b 0%, #6b3fa0 50%, #8b5dc0 100%);
-  color: #ffffff;
+  background: linear-gradient(135deg, #FFCA28, #263238); /* Yorqin sariq, yorqin ko‘k */
+  color: #FFFFFF; /* Oq */
   font-family: 'Inter', sans-serif;
   font-size: 1.1rem;
   font-weight: 700;
@@ -587,22 +562,22 @@
   border-radius: 20px;
   cursor: pointer;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 6px 20px rgba(128, 0, 255, 0.4);
+  box-shadow: 0 6px 20px rgba(255, 202, 40, 0.4); /* Yorqin sariq */
   position: relative;
   overflow: hidden;
   margin-top: 1.5rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  border: 2px solid rgba(255, 215, 0, 0.5);
+  border: 2px solid rgba(255, 202, 40, 0.5); /* Yorqin sariq */
   backdrop-filter: blur(15px);
 }
 
 .music-modal button[style*="margin-top: 10px"]:hover {
-  background: linear-gradient(135deg, #6b3fa0 0%, #8b5dc0 50%, #ab7de0 100%);
+  background: linear-gradient(135deg, #CFD8DC, #263238); /* Och kulrang, yorqin ko‘k */
   transform: translateY(-4px) scale(1.05);
   box-shadow: 
-    0 12px 30px rgba(128, 0, 255, 0.8),
-    0 0 50px rgba(255, 215, 0, 0.5);
+    0 12px 30px rgba(255, 202, 40, 0.8), /* Yorqin sariq */
+    0 0 50px rgba(38, 50, 56, 0.5); /* Yorqin ko‘k */
 }
 
 /* Yuklash bo'limi */
@@ -610,19 +585,18 @@
   margin-top: 2.5rem;
   padding: 2rem;
   background: linear-gradient(135deg, 
-    rgba(0, 0, 0, 0.4) 0%, 
-    rgba(26, 0, 51, 0.4) 50%,
-    rgba(51, 0, 102, 0.4) 100%
+    rgba(38, 50, 56, 0.4), /* Yorqin ko‘k */
+    rgba(55, 71, 79, 0.4) /* Ochroq ko‘k */
   );
   border-radius: 20px;
   backdrop-filter: blur(20px);
   border: 3px solid transparent;
   border-image: linear-gradient(45deg, 
-    #ff0080, #ffff00, #00ff80, #0080ff
+    #FFCA28, #CFD8DC /* Yorqin sariq, och kulrang */
   ) 1;
   box-shadow: 
-    0 10px 40px rgba(255, 215, 0, 0.3),
-    inset 0 0 30px rgba(255, 255, 255, 0.1);
+    0 10px 40px rgba(255, 202, 40, 0.3), /* Yorqin sariq */
+    inset 0 0 30px rgba(255, 255, 255, 0.1); /* Oq */
 }
 
 .music-modal div[style*="margin-top: 20"] label {
@@ -630,7 +604,7 @@
   font-family: 'Inter', sans-serif;
   font-size: 1.3rem;
   font-weight: 700;
-  background: linear-gradient(45deg, #ffff00, #00ff80, #0080ff);
+  background: linear-gradient(45deg, #FFCA28, #CFD8DC); /* Yorqin sariq, och kulrang */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -642,14 +616,13 @@
 .music-modal div[style*="margin-top: 20"] input[type="file"] {
   width: 100%;
   padding: 1rem;
-  border: 2px solid rgba(255, 215, 0, 0.5);
+  border: 2px solid rgba(255, 202, 40, 0.5); /* Yorqin sariq */
   border-radius: 15px;
   background: linear-gradient(135deg, 
-    rgba(255, 0, 128, 0.2), 
-    rgba(255, 215, 0, 0.2), 
-    rgba(0, 255, 128, 0.2)
+    rgba(255, 202, 40, 0.2), /* Yorqin sariq */
+    rgba(207, 216, 220, 0.2) /* Och kulrang */
   );
-  color: #ffffff;
+  color: #FFFFFF; /* Oq */
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
   font-weight: 600;
@@ -660,18 +633,17 @@
 }
 
 .music-modal div[style*="margin-top: 20"] input[type="file"]:hover {
-  border-color: rgba(255, 215, 0, 0.8);
+  border-color: rgba(255, 202, 40, 0.8); /* Yorqin sariq */
   background: linear-gradient(135deg, 
-    rgba(255, 0, 128, 0.3), 
-    rgba(255, 215, 0, 0.3), 
-    rgba(0, 255, 128, 0.3)
+    rgba(255, 202, 40, 0.3), /* Yorqin sariq */
+    rgba(207, 216, 220, 0.3) /* Och kulrang */
   );
-  box-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
+  box-shadow: 0 0 30px rgba(255, 202, 40, 0.4); /* Yorqin sariq */
 }
 
 .music-modal div[style*="margin-top: 20"] input[type="file"]::-webkit-file-upload-button {
-  background: linear-gradient(135deg, #ff0080 0%, #ff4000 50%, #ffff00 100%);
-  color: #ffffff;
+  background: linear-gradient(135deg, #FFCA28, #CFD8DC); /* Yorqin sariq, och kulrang */
+  color: #263238; /* Yorqin ko‘k */
   border: none;
   padding: 0.8rem 1.5rem;
   border-radius: 12px;
@@ -686,16 +658,16 @@
 }
 
 .music-modal div[style*="margin-top: 20"] input[type="file"]::-webkit-file-upload-button:hover {
-  background: linear-gradient(135deg, #ff00a0 0%, #ff6000 50%, #ffff20 100%);
+  background: linear-gradient(135deg, #CFD8DC, #FFCA28); /* Och kulrang, yorqin sariq */
   transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+  box-shadow: 0 0 20px rgba(255, 202, 40, 0.6); /* Yorqin sariq */
 }
 
 .music-modal div[style*="margin-top: 20"] button {
   padding: 1rem 2rem;
-  background: linear-gradient(135deg, #ff4000 0%, #ffff00 50%, #00ff80 100%);
+  background: linear-gradient(135deg, #FFCA28, #CFD8DC); /* Yorqin sariq, och kulrang */
   background-size: 200% 200%;
-  color: #000000;
+  color: #263238; /* Yorqin ko‘k */
   font-family: 'Inter', sans-serif;
   font-size: 1.1rem;
   font-weight: 800;
@@ -703,29 +675,29 @@
   border-radius: 20px;
   cursor: pointer;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.7);
+  box-shadow: 0 6px 20px rgba(255, 202, 40, 0.7); /* Yorqin sariq */
   position: relative;
   overflow: hidden;
   text-transform: uppercase;
   letter-spacing: 2px;
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
-  border: 2px solid rgba(255, 215, 0, 0.9);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8); /* Oq */
+  border: 2px solid rgba(255, 202, 40, 0.9); /* Yorqin sariq */
   animation: uploadGlow 3s ease-in-out infinite;
 }
 
 @keyframes uploadGlow {
   0%, 100% { 
     background-position: 0% 50%; 
-    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.7);
+    box-shadow: 0 6px 20px rgba(255, 202, 40, 0.7); /* Yorqin sariq */
   }
   50% { 
     background-position: 100% 50%; 
-    box-shadow: 0 8px 25px rgba(0, 255, 128, 0.6);
+    box-shadow: 0 8px 25px rgba(207, 216, 220, 0.6); /* Och kulrang */
   }
 }
 
 .music-modal div[style*="margin-top: 20"] button:disabled {
-  background: linear-gradient(135deg, #6b6b6b 0%, #9e9e9e 100%);
+  background: linear-gradient(135deg, #6b6b6b, #9e9e9e); /* Kulrang soya */
   cursor: not-allowed;
   box-shadow: none;
   color: #cccccc;
@@ -733,12 +705,11 @@
 }
 
 .music-modal div[style*="margin-top: 20"] button:hover:not(:disabled) {
-  background: linear-gradient(135deg, #ff6000 0%, #ffff20 50%, #20ff80 100%);
+  background: linear-gradient(135deg, #CFD8DC, #FFCA28); /* Och kulrang, yorqin sariq */
   transform: translateY(-4px) scale(1.05);
   box-shadow: 
-    0 12px 35px rgba(255, 215, 0, 0.9),
-    0 0 60px rgba(255, 128, 0, 0.7);
-  animation-duration: 1.5s;
+    0 12px 35px rgba(255, 202, 40, 0.9), /* Yorqin sariq */
+    0 0 60px rgba(38, 50, 56, 0.7); /* Yorqin ko‘k */
 }
 
 /* Animatsiyalar */
@@ -822,11 +793,11 @@
 /* Accessibility */
 .music-modal button:focus,
 .music-modal input:focus {
-  outline: 3px solid #ffff00;
+  outline: 3px solid #FFCA28; /* Yorqin sariq */
   outline-offset: 3px;
   box-shadow: 
-    0 0 0 6px rgba(255, 255, 0, 0.4),
-    0 0 20px rgba(255, 215, 0, 0.8);
+    0 0 0 6px rgba(255, 202, 40, 0.4), /* Yorqin sariq */
+    0 0 20px rgba(255, 202, 40, 0.8); /* Yorqin sariq */
 }
 
 /* Reduced motion */

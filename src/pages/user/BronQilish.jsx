@@ -2,14 +2,14 @@ import React, { useEffect, useState } from 'react';
 import axios from '../../api/axios';
 import { useParams, useNavigate } from 'react-router-dom';
 import './BronQilish.css';
-import { useTranslation } from 'react-i18next'; // ✅
+import { useTranslation } from 'react-i18next';
 
 const BronQilish = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const { t } = useTranslation(); // ✅
+  const { t } = useTranslation();
 
-  const [bookedDates, setBookedDates] = useState([]);
+  const [bookedDates, setBookedDates] = useState([]); // array of { date, fullname }
   const [selectedDate, setSelectedDate] = useState('');
   const [form, setForm] = useState({
     fullname: '',
@@ -23,7 +23,10 @@ const BronQilish = () => {
   const fetchBookedDates = async () => {
     try {
       const res = await axios.get(`/toyxonalar/${id}/booked-dates`);
-      const dates = res.data.map(item => item.date.split('T')[0]);
+      const dates = res.data.map(item => ({
+        date: item.date.split('T')[0],
+        fullname: item.fullname
+      }));
       setBookedDates(dates);
     } catch {
       setError(t('error_fetchs'));
@@ -40,8 +43,9 @@ const BronQilish = () => {
       return;
     }
 
-    if (bookedDates.includes(selectedDate)) {
-      alert(t('alert_date_booked'));
+    const isBooked = bookedDates.find(d => d.date === selectedDate);
+    if (isBooked) {
+      alert(`${selectedDate} ${t('date_already_booked_by')} ${isBooked.fullname}`);
       return;
     }
 
@@ -68,6 +72,8 @@ const BronQilish = () => {
 
   const today = new Date().toISOString().split('T')[0];
 
+  const selectedBooked = bookedDates.find(d => d.date === selectedDate);
+
   if (loading) return <p className="loading-text">{t('loading')}</p>;
   if (error) return <p className="error-text">{error}</p>;
 
@@ -83,8 +89,9 @@ const BronQilish = () => {
         value={selectedDate}
         onChange={(e) => {
           const value = e.target.value;
-          if (bookedDates.includes(value)) {
-            alert(t('alert_date_booked'));
+          const match = bookedDates.find(d => d.date === value);
+          if (match) {
+            alert(`${value} ${t('date_already_booked_by')} ${match.fullname}`);
             setSelectedDate('');
           } else {
             setSelectedDate(value);
@@ -92,8 +99,11 @@ const BronQilish = () => {
         }}
         className="date-input"
       />
-      {bookedDates.includes(selectedDate) && (
-        <p className="date-error">{t('date_already_booked')}</p>
+
+      {selectedBooked && (
+        <p className="date-error">
+          {t('date_already_booked_by')} <strong>{selectedBooked.fullname}</strong>
+        </p>
       )}
 
       <form className="bron-form" onSubmit={handleSubmit} noValidate>
@@ -126,7 +136,7 @@ const BronQilish = () => {
         />
         <button
           type="submit"
-          disabled={!selectedDate || bookedDates.includes(selectedDate)}
+          disabled={!selectedDate || !!selectedBooked}
           className="submit-button"
         >
           {t('submit_button')}
