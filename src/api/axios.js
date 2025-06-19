@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-  baseURL: 'https://fullstack-backend-toyxona.onrender.com',
+  baseURL: 'https://fullstack-backend-toyxona.onrender.com/api',
 });
 
 instance.interceptors.request.use(config => {

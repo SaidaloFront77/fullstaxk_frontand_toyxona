@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'https://fullstack-backend-toyxona.onrender.com',
+  baseURL: 'https://fullstack-backend-toyxona.onrender.com/api',
 });
 
 API.interceptors.request.use((config) => {
