@@ -7,11 +7,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(45deg, 
-    #263238 0%, /* Yorqin ko‘k */
-    #37474F 50%, /* Ko‘kning biroz ochroq soyasi */
-    #263238 100% /* Yorqin ko‘k */
-  );
+  background: linear-gradient(45deg, #263238 0%, #37474F 50%, #263238 100%);
   background-size: 400% 400%;
   animation: backgroundShift 8s ease-in-out infinite;
   z-index: -2;
@@ -24,10 +20,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: 
-    radial-gradient(circle at 20% 20%, rgba(255, 202, 40, 0.3) 0%, transparent 50%), /* Yorqin sariq */
-    radial-gradient(circle at 80% 80%, rgba(207, 216, 220, 0.3) 0%, transparent 50%), /* Och kulrang */
-    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.2) 0%, transparent 50%); /* Oq */
+  background: radial-gradient(circle at 20% 20%, rgba(255, 202, 40, 0.3) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(207, 216, 220, 0.3) 0%, transparent 50%), radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.2) 0%, transparent 50%);
   animation: floatingLights 6s ease-in-out infinite;
 }
 
@@ -37,12 +30,12 @@
 }
 
 @keyframes floatingLights {
-  0%, 100% { 
-    transform: scale(1) rotate(0deg); 
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
     opacity: 0.8;
   }
-  50% { 
-    transform: scale(1.2) rotate(180deg); 
+  50% {
+    transform: scale(1.2) rotate(180deg);
     opacity: 1;
   }
 }
@@ -53,6 +46,7 @@
   padding: 120px 2rem 60px;
   position: relative;
   z-index: 1;
+  overflow-x: hidden;
 }
 
 /* Sarlavha */
@@ -366,54 +360,61 @@
 
   .simple-title {
     font-size: 2.2rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
     letter-spacing: 2px;
   }
 
   .simple-toyxona-card {
-    padding: 1.5rem;
+    padding: 1.2rem;
     border-radius: 18px;
   }
 
   .simple-card-image {
-    height: 200px;
-    border-radius: 12px;
-  }
-
-  .simple-card-name {
-    font-size: 1.6rem;
-  }
-
-  .simple-bron-button {
-    font-size: 1rem;
-    padding: 1rem 1.2rem;
-    border-radius: 12px;
-  }
-}
-
-@media (max-width: 480px) {
-  .simple-title {
-    font-size: 1.8rem;
-    letter-spacing: 1px;
-    margin-bottom: 2rem;
+    height: 180px;
+    border-radius: 10px;
   }
 
   .simple-card-name {
     font-size: 1.4rem;
   }
 
-  .simple-card-rayon {
+  .simple-bron-button {
     font-size: 1rem;
+    padding: 0.9rem 1.1rem;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .simple-title {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+  }
+
+  .simple-card-name {
+    font-size: 1.2rem;
+  }
+
+  .simple-card-rayon {
+    font-size: 0.95rem;
   }
 
   .simple-card-price {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .simple-bron-button {
-    padding: 0.9rem 1rem;
-    font-size: 0.95rem;
-    border-radius: 10px;
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+  
+  .simple-toyxona-card {
+    padding: 1rem;
+  }
+
+  .simple-card-image {
+    height: 150px;
   }
 }
 
