@@ -36,7 +36,9 @@ const Owners = () => {
       console.error('Delete owner error:', error);
     }
   };
-
+  git remote add origin https://github.com/SaidaloFront77/fullstaxk_frontand_toyxona.git
+  git branch -M main
+  git push -u origin main
   if (loading) return <p className="loading-text">Yuklanmoqda...</p>;
   if (error) return <p className="error-text">{error}</p>;
 
