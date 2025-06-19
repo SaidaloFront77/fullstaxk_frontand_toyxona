@@ -348,7 +348,7 @@
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
   }
-  
+
   .simple-title {
     font-size: 3rem;
   }
@@ -358,35 +358,62 @@
   .simple-container {
     padding: 100px 1rem 40px;
   }
-  
+
   .simple-cards-wrapper {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  
+
   .simple-title {
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
+    font-size: 2.2rem;
+    margin-bottom: 2.5rem;
+    letter-spacing: 2px;
   }
-  
+
   .simple-toyxona-card {
     padding: 1.5rem;
+    border-radius: 18px;
+  }
+
+  .simple-card-image {
+    height: 200px;
+    border-radius: 12px;
+  }
+
+  .simple-card-name {
+    font-size: 1.6rem;
+  }
+
+  .simple-bron-button {
+    font-size: 1rem;
+    padding: 1rem 1.2rem;
+    border-radius: 12px;
   }
 }
 
 @media (max-width: 480px) {
   .simple-title {
-    font-size: 2rem;
-    letter-spacing: 2px;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
   }
-  
+
   .simple-card-name {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
-  
-  .simple-bron-button {
-    padding: 1rem 1.5rem;
+
+  .simple-card-rayon {
     font-size: 1rem;
+  }
+
+  .simple-card-price {
+    font-size: 1.1rem;
+  }
+
+  .simple-bron-button {
+    padding: 0.9rem 1rem;
+    font-size: 0.95rem;
+    border-radius: 10px;
   }
 }
 
